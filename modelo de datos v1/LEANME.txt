@@ -1,0 +1,9 @@
+chicos, envio el modelo de datos que hablamos.
+hay que tener atencion en cuales tablas seran mantenibles ya que los usuarios creador, actualizador y eliminador 
+mas las fechas correspondientes se guardaran en cada tabla que se necesite mantener.... 
+por el momento fui super acotado con eso pensando en una base que cresera mui rapido
+ademas de esto, la geolocalizacion utilizando el servicio o api de google maps
+me devuelve datos de latitud longitus presicion y alturas relatias que no vienen al caso
+segun yo esta bien asi, pero esta la posivilidad de tener una tabla aparte con la localizacion
+que almenos yo no le veria la utilidad asi que lo dejo a discusion
+Saludos y espero comentarios
