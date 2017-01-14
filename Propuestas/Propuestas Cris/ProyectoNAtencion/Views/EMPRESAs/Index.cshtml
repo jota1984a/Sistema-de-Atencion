@@ -1,0 +1,99 @@
+﻿@model IEnumerable<ProyectoNAtencion.Models.EMPRESA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE_EMPRESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RUT_EMPRESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIRECCION_EMPRESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RUBRO_EMPRESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GIRO_EMPRESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UCR_EMPRESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CAC_EMPRESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UEL_EMPRESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FCR_EMPRESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FAC_EMPRESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FEL_EMPRESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMUNA.NOMBRE_COMUNA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RUT_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIRECCION_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RUBRO_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GIRO_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UCR_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CAC_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UEL_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FCR_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FAC_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FEL_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMUNA.NOMBRE_COMUNA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_EMPRESA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_EMPRESA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_EMPRESA })
+        </td>
+    </tr>
+}
+
+</table>

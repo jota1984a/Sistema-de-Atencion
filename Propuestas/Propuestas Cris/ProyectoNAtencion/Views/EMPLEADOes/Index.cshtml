@@ -1,0 +1,129 @@
+﻿@model IEnumerable<ProyectoNAtencion.Models.EMPLEADO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE_EMPLEADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APPAT_EMPLEADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APMAT_EMPLEADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RUT_EMPLEADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIRECCION_EMPLEADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TELEFONO_EMPLEADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMAIL_EMPLEADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USUARIO_EMPLEADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PASS_EMPLEADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UCR_EMPLEADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UAC_EMPLEADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UEL_EMPLEADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FCR_EMPLEADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FAC_EMPLEADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FEL_EMPLEADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CARGO.NOMBRE_CARGO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUCURSAL.NOMBRE_SUCURSAL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE_EMPLEADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APPAT_EMPLEADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APMAT_EMPLEADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RUT_EMPLEADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIRECCION_EMPLEADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TELEFONO_EMPLEADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMAIL_EMPLEADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USUARIO_EMPLEADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PASS_EMPLEADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UCR_EMPLEADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UAC_EMPLEADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UEL_EMPLEADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FCR_EMPLEADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FAC_EMPLEADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FEL_EMPLEADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CARGO.NOMBRE_CARGO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUCURSAL.NOMBRE_SUCURSAL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_EMPLEADO }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_EMPLEADO }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_EMPLEADO })
+        </td>
+    </tr>
+}
+
+</table>

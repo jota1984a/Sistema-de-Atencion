@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NatencionModelStoreContainer" CdmEntityContainer="NatencionEntities">
+    <EntitySetMapping Name="CARGO">
+      <EntityTypeMapping TypeName="NatencionModel.CARGO">
+        <MappingFragment StoreEntitySet="CARGO">
+          <ScalarProperty Name="ID_CARGO" ColumnName="ID_CARGO" />
+          <ScalarProperty Name="NOMBRE_CARGO" ColumnName="NOMBRE_CARGO" />
+          <ScalarProperty Name="DESCRIPCION_CARGO" ColumnName="DESCRIPCION_CARGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CIUDAD">
+      <EntityTypeMapping TypeName="NatencionModel.CIUDAD">
+        <MappingFragment StoreEntitySet="CIUDAD">
+          <ScalarProperty Name="ID_CIUDAD" ColumnName="ID_CIUDAD" />
+          <ScalarProperty Name="ID_REGION" ColumnName="ID_REGION" />
+          <ScalarProperty Name="NOMBRE_CIUDAD" ColumnName="NOMBRE_CIUDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLASIFICACION">
+      <EntityTypeMapping TypeName="NatencionModel.CLASIFICACION">
+        <MappingFragment StoreEntitySet="CLASIFICACION">
+          <ScalarProperty Name="ID_CLASIFICACION" ColumnName="ID_CLASIFICACION" />
+          <ScalarProperty Name="NUMERO" ColumnName="NUMERO" />
+          <ScalarProperty Name="HORA" ColumnName="HORA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTE">
+      <EntityTypeMapping TypeName="NatencionModel.CLIENTE">
+        <MappingFragment StoreEntitySet="CLIENTE">
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+          <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APPAT" ColumnName="APPAT" />
+          <ScalarProperty Name="APMAT" ColumnName="APMAT" />
+          <ScalarProperty Name="RUT" ColumnName="RUT" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="PASS" ColumnName="PASS" />
+          <ScalarProperty Name="PREGUNTASEG1" ColumnName="PREGUNTASEG1" />
+          <ScalarProperty Name="RESPUESTASEG1" ColumnName="RESPUESTASEG1" />
+          <ScalarProperty Name="PREGUNTASEG2" ColumnName="PREGUNTASEG2" />
+          <ScalarProperty Name="RESPUESTASEG2" ColumnName="RESPUESTASEG2" />
+          <ScalarProperty Name="UCR_CLIENTE" ColumnName="UCR_CLIENTE" />
+          <ScalarProperty Name="UAC_CLIENTE" ColumnName="UAC_CLIENTE" />
+          <ScalarProperty Name="UEL_CLIENTE" ColumnName="UEL_CLIENTE" />
+          <ScalarProperty Name="FCR_CLIENTE" ColumnName="FCR_CLIENTE" />
+          <ScalarProperty Name="FAC_CLIENTE" ColumnName="FAC_CLIENTE" />
+          <ScalarProperty Name="FEL_CLIENTE" ColumnName="FEL_CLIENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMUNA">
+      <EntityTypeMapping TypeName="NatencionModel.COMUNA">
+        <MappingFragment StoreEntitySet="COMUNA">
+          <ScalarProperty Name="ID_COMUNA" ColumnName="ID_COMUNA" />
+          <ScalarProperty Name="ID_CIUDAD" ColumnName="ID_CIUDAD" />
+          <ScalarProperty Name="NOMBRE_COMUNA" ColumnName="NOMBRE_COMUNA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLEADO">
+      <EntityTypeMapping TypeName="NatencionModel.EMPLEADO">
+        <MappingFragment StoreEntitySet="EMPLEADO">
+          <ScalarProperty Name="ID_EMPLEADO" ColumnName="ID_EMPLEADO" />
+          <ScalarProperty Name="ID_CARGO" ColumnName="ID_CARGO" />
+          <ScalarProperty Name="ID_SUCURSAL" ColumnName="ID_SUCURSAL" />
+          <ScalarProperty Name="NOMBRE_EMPLEADO" ColumnName="NOMBRE_EMPLEADO" />
+          <ScalarProperty Name="APPAT_EMPLEADO" ColumnName="APPAT_EMPLEADO" />
+          <ScalarProperty Name="APMAT_EMPLEADO" ColumnName="APMAT_EMPLEADO" />
+          <ScalarProperty Name="RUT_EMPLEADO" ColumnName="RUT_EMPLEADO" />
+          <ScalarProperty Name="DIRECCION_EMPLEADO" ColumnName="DIRECCION_EMPLEADO" />
+          <ScalarProperty Name="TELEFONO_EMPLEADO" ColumnName="TELEFONO_EMPLEADO" />
+          <ScalarProperty Name="EMAIL_EMPLEADO" ColumnName="EMAIL_EMPLEADO" />
+          <ScalarProperty Name="USUARIO_EMPLEADO" ColumnName="USUARIO_EMPLEADO" />
+          <ScalarProperty Name="PASS_EMPLEADO" ColumnName="PASS_EMPLEADO" />
+          <ScalarProperty Name="UCR_EMPLEADO" ColumnName="UCR_EMPLEADO" />
+          <ScalarProperty Name="UAC_EMPLEADO" ColumnName="UAC_EMPLEADO" />
+          <ScalarProperty Name="UEL_EMPLEADO" ColumnName="UEL_EMPLEADO" />
+          <ScalarProperty Name="FCR_EMPLEADO" ColumnName="FCR_EMPLEADO" />
+          <ScalarProperty Name="FAC_EMPLEADO" ColumnName="FAC_EMPLEADO" />
+          <ScalarProperty Name="FEL_EMPLEADO" ColumnName="FEL_EMPLEADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPRESA">
+      <EntityTypeMapping TypeName="NatencionModel.EMPRESA">
+        <MappingFragment StoreEntitySet="EMPRESA">
+          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+          <ScalarProperty Name="ID_COMUNA" ColumnName="ID_COMUNA" />
+          <ScalarProperty Name="NOMBRE_EMPRESA" ColumnName="NOMBRE_EMPRESA" />
+          <ScalarProperty Name="RUT_EMPRESA" ColumnName="RUT_EMPRESA" />
+          <ScalarProperty Name="DIRECCION_EMPRESA" ColumnName="DIRECCION_EMPRESA" />
+          <ScalarProperty Name="RUBRO_EMPRESA" ColumnName="RUBRO_EMPRESA" />
+          <ScalarProperty Name="GIRO_EMPRESA" ColumnName="GIRO_EMPRESA" />
+          <ScalarProperty Name="UCR_EMPRESA" ColumnName="UCR_EMPRESA" />
+          <ScalarProperty Name="CAC_EMPRESA" ColumnName="CAC_EMPRESA" />
+          <ScalarProperty Name="UEL_EMPRESA" ColumnName="UEL_EMPRESA" />
+          <ScalarProperty Name="FCR_EMPRESA" ColumnName="FCR_EMPRESA" />
+          <ScalarProperty Name="FAC_EMPRESA" ColumnName="FAC_EMPRESA" />
+          <ScalarProperty Name="FEL_EMPRESA" ColumnName="FEL_EMPRESA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO">
+      <EntityTypeMapping TypeName="NatencionModel.ESTADO">
+        <MappingFragment StoreEntitySet="ESTADO">
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+          <ScalarProperty Name="DESCRIPCION_ESTADO" ColumnName="DESCRIPCION_ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAIS">
+      <EntityTypeMapping TypeName="NatencionModel.PAIS">
+        <MappingFragment StoreEntitySet="PAIS">
+          <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+          <ScalarProperty Name="NOMBRE_PAIS" ColumnName="NOMBRE_PAIS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRIVILEGIO">
+      <EntityTypeMapping TypeName="NatencionModel.PRIVILEGIO">
+        <MappingFragment StoreEntitySet="PRIVILEGIO">
+          <ScalarProperty Name="ID_PRIVILEGIO" ColumnName="ID_PRIVILEGIO" />
+          <ScalarProperty Name="NOMBRE_PRIVILEGIO" ColumnName="NOMBRE_PRIVILEGIO" />
+          <ScalarProperty Name="DESCRIPCION_PRIVILEGIO" ColumnName="DESCRIPCION_PRIVILEGIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REGION">
+      <EntityTypeMapping TypeName="NatencionModel.REGION">
+        <MappingFragment StoreEntitySet="REGION">
+          <ScalarProperty Name="ID_REGION" ColumnName="ID_REGION" />
+          <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+          <ScalarProperty Name="NOMBRE_REGION" ColumnName="NOMBRE_REGION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESERVA">
+      <EntityTypeMapping TypeName="NatencionModel.RESERVA">
+        <MappingFragment StoreEntitySet="RESERVA">
+          <ScalarProperty Name="ID_RESERVA" ColumnName="ID_RESERVA" />
+          <ScalarProperty Name="ID_SUCURSAL" ColumnName="ID_SUCURSAL" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="ID_ATENCION" ColumnName="ID_ATENCION" />
+          <ScalarProperty Name="TIPO_RESERVA" ColumnName="TIPO_RESERVA" />
+          <ScalarProperty Name="HORA_RESERVA" ColumnName="HORA_RESERVA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROL">
+      <EntityTypeMapping TypeName="NatencionModel.ROL">
+        <MappingFragment StoreEntitySet="ROL">
+          <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
+          <ScalarProperty Name="ID_PRIVILEGIO" ColumnName="ID_PRIVILEGIO" />
+          <ScalarProperty Name="NOMBRE_ROL" ColumnName="NOMBRE_ROL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUCURSAL">
+      <EntityTypeMapping TypeName="NatencionModel.SUCURSAL">
+        <MappingFragment StoreEntitySet="SUCURSAL">
+          <ScalarProperty Name="ID_SUCURSAL" ColumnName="ID_SUCURSAL" />
+          <ScalarProperty Name="ID_CLASIFICACION" ColumnName="ID_CLASIFICACION" />
+          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+          <ScalarProperty Name="NOMBRE_SUCURSAL" ColumnName="NOMBRE_SUCURSAL" />
+          <ScalarProperty Name="HORA_INICIO" ColumnName="HORA_INICIO" />
+          <ScalarProperty Name="HORA_TERMINO" ColumnName="HORA_TERMINO" />
+          <ScalarProperty Name="LATITUD_SUCURSAL" ColumnName="LATITUD_SUCURSAL" />
+          <ScalarProperty Name="LONGITUD_SUCURSAL" ColumnName="LONGITUD_SUCURSAL" />
+          <ScalarProperty Name="PRECISION_SUCURSAL" ColumnName="PRECISION_SUCURSAL" />
+          <ScalarProperty Name="UCR_SUCURSAL" ColumnName="UCR_SUCURSAL" />
+          <ScalarProperty Name="UAC_SUCURSAL" ColumnName="UAC_SUCURSAL" />
+          <ScalarProperty Name="UEL_SUCURSAL" ColumnName="UEL_SUCURSAL" />
+          <ScalarProperty Name="FCR_SUCURSAL" ColumnName="FCR_SUCURSAL" />
+          <ScalarProperty Name="FAC_SUCURSAL" ColumnName="FAC_SUCURSAL" />
+          <ScalarProperty Name="FEL_SUCURSAL" ColumnName="FEL_SUCURSAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="NatencionModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIEMPO_ATENCION">
+      <EntityTypeMapping TypeName="NatencionModel.TIEMPO_ATENCION">
+        <MappingFragment StoreEntitySet="TIEMPO_ATENCION">
+          <ScalarProperty Name="ID_ATENCION" ColumnName="ID_ATENCION" />
+          <ScalarProperty Name="TIEMPO_ATENCION1" ColumnName="TIEMPO_ATENCION" />
+          <ScalarProperty Name="VALOR_ATENCION" ColumnName="VALOR_ATENCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

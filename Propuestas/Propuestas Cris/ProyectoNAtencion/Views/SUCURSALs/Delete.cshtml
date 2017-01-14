@@ -1,0 +1,136 @@
+﻿@model ProyectoNAtencion.Models.SUCURSAL
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SUCURSAL</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_SUCURSAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_SUCURSAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HORA_INICIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HORA_INICIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HORA_TERMINO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HORA_TERMINO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LATITUD_SUCURSAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LATITUD_SUCURSAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LONGITUD_SUCURSAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LONGITUD_SUCURSAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRECISION_SUCURSAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRECISION_SUCURSAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UCR_SUCURSAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UCR_SUCURSAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UAC_SUCURSAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UAC_SUCURSAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UEL_SUCURSAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UEL_SUCURSAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FCR_SUCURSAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FCR_SUCURSAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FAC_SUCURSAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FAC_SUCURSAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FEL_SUCURSAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FEL_SUCURSAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLASIFICACION.NUMERO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLASIFICACION.NUMERO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMPRESA.NOMBRE_EMPRESA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMPRESA.NOMBRE_EMPRESA)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

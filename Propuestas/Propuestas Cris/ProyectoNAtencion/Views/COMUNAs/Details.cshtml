@@ -1,0 +1,34 @@
+﻿@model ProyectoNAtencion.Models.COMUNA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>COMUNA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_COMUNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_COMUNA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CIUDAD.NOMBRE_CIUDAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CIUDAD.NOMBRE_CIUDAD)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_COMUNA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,1100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="NatencionModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CARGO">
+          <Key>
+            <PropertyRef Name="ID_CARGO" />
+          </Key>
+          <Property Name="ID_CARGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBRE_CARGO" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="DESCRIPCION_CARGO" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="CIUDAD">
+          <Key>
+            <PropertyRef Name="ID_CIUDAD" />
+          </Key>
+          <Property Name="ID_CIUDAD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_REGION" Type="int" />
+          <Property Name="NOMBRE_CIUDAD" Type="varchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CLASIFICACION">
+          <Key>
+            <PropertyRef Name="ID_CLASIFICACION" />
+          </Key>
+          <Property Name="ID_CLASIFICACION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NUMERO" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="HORA" Type="datetime" />
+          <Property Name="NOMBRE" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="CLIENTE">
+          <Key>
+            <PropertyRef Name="ID_CLIENTE" />
+          </Key>
+          <Property Name="ID_CLIENTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_ESTADO" Type="int" />
+          <Property Name="ID_ROL" Type="int" />
+          <Property Name="NOMBRE" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="APPAT" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="APMAT" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="RUT" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="DIRECCION" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TELEFONO" Type="int" Nullable="false" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="USUARIO" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="PASS" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="PREGUNTASEG1" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="RESPUESTASEG1" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="PREGUNTASEG2" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="RESPUESTASEG2" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="UCR_CLIENTE" Type="int" />
+          <Property Name="UAC_CLIENTE" Type="int" />
+          <Property Name="UEL_CLIENTE" Type="int" />
+          <Property Name="FCR_CLIENTE" Type="datetime" />
+          <Property Name="FAC_CLIENTE" Type="datetime" />
+          <Property Name="FEL_CLIENTE" Type="datetime" />
+        </EntityType>
+        <EntityType Name="COMUNA">
+          <Key>
+            <PropertyRef Name="ID_COMUNA" />
+          </Key>
+          <Property Name="ID_COMUNA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_CIUDAD" Type="int" />
+          <Property Name="NOMBRE_COMUNA" Type="varchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EMPLEADO">
+          <Key>
+            <PropertyRef Name="ID_EMPLEADO" />
+          </Key>
+          <Property Name="ID_EMPLEADO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_CARGO" Type="int" />
+          <Property Name="ID_SUCURSAL" Type="int" Nullable="false" />
+          <Property Name="NOMBRE_EMPLEADO" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="APPAT_EMPLEADO" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="APMAT_EMPLEADO" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="RUT_EMPLEADO" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="DIRECCION_EMPLEADO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TELEFONO_EMPLEADO" Type="int" Nullable="false" />
+          <Property Name="EMAIL_EMPLEADO" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="USUARIO_EMPLEADO" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="PASS_EMPLEADO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="UCR_EMPLEADO" Type="int" Nullable="false" />
+          <Property Name="UAC_EMPLEADO" Type="int" />
+          <Property Name="UEL_EMPLEADO" Type="int" />
+          <Property Name="FCR_EMPLEADO" Type="datetime" Nullable="false" />
+          <Property Name="FAC_EMPLEADO" Type="datetime" />
+          <Property Name="FEL_EMPLEADO" Type="datetime" />
+        </EntityType>
+        <EntityType Name="EMPRESA">
+          <Key>
+            <PropertyRef Name="ID_EMPRESA" />
+          </Key>
+          <Property Name="ID_EMPRESA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_COMUNA" Type="int" />
+          <Property Name="NOMBRE_EMPRESA" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="RUT_EMPRESA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="DIRECCION_EMPRESA" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="RUBRO_EMPRESA" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="GIRO_EMPRESA" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="UCR_EMPRESA" Type="int" Nullable="false" />
+          <Property Name="CAC_EMPRESA" Type="int" />
+          <Property Name="UEL_EMPRESA" Type="int" />
+          <Property Name="FCR_EMPRESA" Type="datetime" Nullable="false" />
+          <Property Name="FAC_EMPRESA" Type="datetime" />
+          <Property Name="FEL_EMPRESA" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ESTADO">
+          <Key>
+            <PropertyRef Name="ID_ESTADO" />
+          </Key>
+          <Property Name="ID_ESTADO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DESCRIPCION_ESTADO" Type="varchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PAIS">
+          <Key>
+            <PropertyRef Name="ID_PAIS" />
+          </Key>
+          <Property Name="ID_PAIS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBRE_PAIS" Type="varchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PRIVILEGIO">
+          <Key>
+            <PropertyRef Name="ID_PRIVILEGIO" />
+          </Key>
+          <Property Name="ID_PRIVILEGIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBRE_PRIVILEGIO" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="DESCRIPCION_PRIVILEGIO" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="REGION">
+          <Key>
+            <PropertyRef Name="ID_REGION" />
+          </Key>
+          <Property Name="ID_REGION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_PAIS" Type="int" />
+          <Property Name="NOMBRE_REGION" Type="varchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RESERVA">
+          <Key>
+            <PropertyRef Name="ID_RESERVA" />
+          </Key>
+          <Property Name="ID_RESERVA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_SUCURSAL" Type="int" Nullable="false" />
+          <Property Name="ID_CLIENTE" Type="int" Nullable="false" />
+          <Property Name="ID_ATENCION" Type="int" />
+          <Property Name="TIPO_RESERVA" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="HORA_RESERVA" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ROL">
+          <Key>
+            <PropertyRef Name="ID_ROL" />
+          </Key>
+          <Property Name="ID_ROL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_PRIVILEGIO" Type="int" />
+          <Property Name="NOMBRE_ROL" Type="varchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SUCURSAL">
+          <Key>
+            <PropertyRef Name="ID_SUCURSAL" />
+          </Key>
+          <Property Name="ID_SUCURSAL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_CLASIFICACION" Type="int" />
+          <Property Name="ID_EMPRESA" Type="int" />
+          <Property Name="NOMBRE_SUCURSAL" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="HORA_INICIO" Type="time" Precision="7" Nullable="false" />
+          <Property Name="HORA_TERMINO" Type="time" Precision="7" Nullable="false" />
+          <Property Name="LATITUD_SUCURSAL" Type="decimal" Precision="20" Scale="20" />
+          <Property Name="LONGITUD_SUCURSAL" Type="decimal" Precision="20" Scale="20" />
+          <Property Name="PRECISION_SUCURSAL" Type="decimal" Precision="20" Scale="20" />
+          <Property Name="UCR_SUCURSAL" Type="int" Nullable="false" />
+          <Property Name="UAC_SUCURSAL" Type="int" />
+          <Property Name="UEL_SUCURSAL" Type="int" />
+          <Property Name="FCR_SUCURSAL" Type="datetime" Nullable="false" />
+          <Property Name="FAC_SUCURSAL" Type="datetime" />
+          <Property Name="FEL_SUCURSAL" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TIEMPO_ATENCION">
+          <Key>
+            <PropertyRef Name="ID_ATENCION" />
+          </Key>
+          <Property Name="ID_ATENCION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TIEMPO_ATENCION" Type="datetime" Nullable="false" />
+          <Property Name="VALOR_ATENCION" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_CIUDAD_PERTENECE_REGION">
+          <End Role="REGION" Type="Self.REGION" Multiplicity="0..1" />
+          <End Role="CIUDAD" Type="Self.CIUDAD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="REGION">
+              <PropertyRef Name="ID_REGION" />
+            </Principal>
+            <Dependent Role="CIUDAD">
+              <PropertyRef Name="ID_REGION" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CLIENTE_TIENE2_ESTADO">
+          <End Role="ESTADO" Type="Self.ESTADO" Multiplicity="0..1" />
+          <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESTADO">
+              <PropertyRef Name="ID_ESTADO" />
+            </Principal>
+            <Dependent Role="CLIENTE">
+              <PropertyRef Name="ID_ESTADO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CLIENTE_TIENE3_ROL">
+          <End Role="ROL" Type="Self.ROL" Multiplicity="0..1" />
+          <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROL">
+              <PropertyRef Name="ID_ROL" />
+            </Principal>
+            <Dependent Role="CLIENTE">
+              <PropertyRef Name="ID_ROL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COMUNA_PERTENECE_CIUDAD">
+          <End Role="CIUDAD" Type="Self.CIUDAD" Multiplicity="0..1" />
+          <End Role="COMUNA" Type="Self.COMUNA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CIUDAD">
+              <PropertyRef Name="ID_CIUDAD" />
+            </Principal>
+            <Dependent Role="COMUNA">
+              <PropertyRef Name="ID_CIUDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EMPLEADO_INCLUYE2_SUCURSAL">
+          <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="1" />
+          <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SUCURSAL">
+              <PropertyRef Name="ID_SUCURSAL" />
+            </Principal>
+            <Dependent Role="EMPLEADO">
+              <PropertyRef Name="ID_SUCURSAL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EMPLEADO_UTILIZA_CARGO">
+          <End Role="CARGO" Type="Self.CARGO" Multiplicity="0..1" />
+          <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARGO">
+              <PropertyRef Name="ID_CARGO" />
+            </Principal>
+            <Dependent Role="EMPLEADO">
+              <PropertyRef Name="ID_CARGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EMPRESA_ESTA_COMUNA">
+          <End Role="COMUNA" Type="Self.COMUNA" Multiplicity="0..1" />
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COMUNA">
+              <PropertyRef Name="ID_COMUNA" />
+            </Principal>
+            <Dependent Role="EMPRESA">
+              <PropertyRef Name="ID_COMUNA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGION_PERTENECE_PAIS">
+          <End Role="PAIS" Type="Self.PAIS" Multiplicity="0..1" />
+          <End Role="REGION" Type="Self.REGION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PAIS">
+              <PropertyRef Name="ID_PAIS" />
+            </Principal>
+            <Dependent Role="REGION">
+              <PropertyRef Name="ID_PAIS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RESERVA_INTEGRA2_TIEMPO_A">
+          <End Role="TIEMPO_ATENCION" Type="Self.TIEMPO_ATENCION" Multiplicity="0..1" />
+          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIEMPO_ATENCION">
+              <PropertyRef Name="ID_ATENCION" />
+            </Principal>
+            <Dependent Role="RESERVA">
+              <PropertyRef Name="ID_ATENCION" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RESERVA_PERTENECE_CLIENTE">
+          <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="1" />
+          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTE">
+              <PropertyRef Name="ID_CLIENTE" />
+            </Principal>
+            <Dependent Role="RESERVA">
+              <PropertyRef Name="ID_CLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RESERVA_POSEE_SUCURSAL">
+          <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="1" />
+          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SUCURSAL">
+              <PropertyRef Name="ID_SUCURSAL" />
+            </Principal>
+            <Dependent Role="RESERVA">
+              <PropertyRef Name="ID_SUCURSAL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ROL_INTEGRA_PRIVILEG">
+          <End Role="PRIVILEGIO" Type="Self.PRIVILEGIO" Multiplicity="0..1" />
+          <End Role="ROL" Type="Self.ROL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRIVILEGIO">
+              <PropertyRef Name="ID_PRIVILEGIO" />
+            </Principal>
+            <Dependent Role="ROL">
+              <PropertyRef Name="ID_PRIVILEGIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SUCURSAL_TIENE_CLASIFIC">
+          <End Role="CLASIFICACION" Type="Self.CLASIFICACION" Multiplicity="0..1" />
+          <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLASIFICACION">
+              <PropertyRef Name="ID_CLASIFICACION" />
+            </Principal>
+            <Dependent Role="SUCURSAL">
+              <PropertyRef Name="ID_CLASIFICACION" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SUCURSAL_TIENE4_EMPRESA">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="0..1" />
+          <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Principal>
+            <Dependent Role="SUCURSAL">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="NatencionModelStoreContainer">
+          <EntitySet Name="CARGO" EntityType="Self.CARGO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CIUDAD" EntityType="Self.CIUDAD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CLASIFICACION" EntityType="Self.CLASIFICACION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COMUNA" EntityType="Self.COMUNA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EMPLEADO" EntityType="Self.EMPLEADO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EMPRESA" EntityType="Self.EMPRESA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ESTADO" EntityType="Self.ESTADO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PAIS" EntityType="Self.PAIS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRIVILEGIO" EntityType="Self.PRIVILEGIO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="REGION" EntityType="Self.REGION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RESERVA" EntityType="Self.RESERVA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ROL" EntityType="Self.ROL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SUCURSAL" EntityType="Self.SUCURSAL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TIEMPO_ATENCION" EntityType="Self.TIEMPO_ATENCION" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CIUDAD_PERTENECE_REGION" Association="Self.FK_CIUDAD_PERTENECE_REGION">
+            <End Role="REGION" EntitySet="REGION" />
+            <End Role="CIUDAD" EntitySet="CIUDAD" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CLIENTE_TIENE2_ESTADO" Association="Self.FK_CLIENTE_TIENE2_ESTADO">
+            <End Role="ESTADO" EntitySet="ESTADO" />
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CLIENTE_TIENE3_ROL" Association="Self.FK_CLIENTE_TIENE3_ROL">
+            <End Role="ROL" EntitySet="ROL" />
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COMUNA_PERTENECE_CIUDAD" Association="Self.FK_COMUNA_PERTENECE_CIUDAD">
+            <End Role="CIUDAD" EntitySet="CIUDAD" />
+            <End Role="COMUNA" EntitySet="COMUNA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EMPLEADO_INCLUYE2_SUCURSAL" Association="Self.FK_EMPLEADO_INCLUYE2_SUCURSAL">
+            <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+            <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EMPLEADO_UTILIZA_CARGO" Association="Self.FK_EMPLEADO_UTILIZA_CARGO">
+            <End Role="CARGO" EntitySet="CARGO" />
+            <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EMPRESA_ESTA_COMUNA" Association="Self.FK_EMPRESA_ESTA_COMUNA">
+            <End Role="COMUNA" EntitySet="COMUNA" />
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGION_PERTENECE_PAIS" Association="Self.FK_REGION_PERTENECE_PAIS">
+            <End Role="PAIS" EntitySet="PAIS" />
+            <End Role="REGION" EntitySet="REGION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RESERVA_INTEGRA2_TIEMPO_A" Association="Self.FK_RESERVA_INTEGRA2_TIEMPO_A">
+            <End Role="TIEMPO_ATENCION" EntitySet="TIEMPO_ATENCION" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RESERVA_PERTENECE_CLIENTE" Association="Self.FK_RESERVA_PERTENECE_CLIENTE">
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RESERVA_POSEE_SUCURSAL" Association="Self.FK_RESERVA_POSEE_SUCURSAL">
+            <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ROL_INTEGRA_PRIVILEG" Association="Self.FK_ROL_INTEGRA_PRIVILEG">
+            <End Role="PRIVILEGIO" EntitySet="PRIVILEGIO" />
+            <End Role="ROL" EntitySet="ROL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SUCURSAL_TIENE_CLASIFIC" Association="Self.FK_SUCURSAL_TIENE_CLASIFIC">
+            <End Role="CLASIFICACION" EntitySet="CLASIFICACION" />
+            <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SUCURSAL_TIENE4_EMPRESA" Association="Self.FK_SUCURSAL_TIENE4_EMPRESA">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NatencionModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CARGO">
+          <Key>
+            <PropertyRef Name="ID_CARGO" />
+          </Key>
+          <Property Name="ID_CARGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE_CARGO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESCRIPCION_CARGO" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="EMPLEADO" Relationship="Self.FK_EMPLEADO_UTILIZA_CARGO" FromRole="CARGO" ToRole="EMPLEADO" />
+        </EntityType>
+        <EntityType Name="CIUDAD">
+          <Key>
+            <PropertyRef Name="ID_CIUDAD" />
+          </Key>
+          <Property Name="ID_CIUDAD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_REGION" Type="Int32" />
+          <Property Name="NOMBRE_CIUDAD" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="REGION" Relationship="Self.FK_CIUDAD_PERTENECE_REGION" FromRole="CIUDAD" ToRole="REGION" />
+          <NavigationProperty Name="COMUNA" Relationship="Self.FK_COMUNA_PERTENECE_CIUDAD" FromRole="CIUDAD" ToRole="COMUNA" />
+        </EntityType>
+        <EntityType Name="CLASIFICACION">
+          <Key>
+            <PropertyRef Name="ID_CLASIFICACION" />
+          </Key>
+          <Property Name="ID_CLASIFICACION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NUMERO" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HORA" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="SUCURSAL" Relationship="Self.FK_SUCURSAL_TIENE_CLASIFIC" FromRole="CLASIFICACION" ToRole="SUCURSAL" />
+          <Property Name="NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CLIENTE">
+          <Key>
+            <PropertyRef Name="ID_CLIENTE" />
+          </Key>
+          <Property Name="ID_CLIENTE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_ESTADO" Type="Int32" />
+          <Property Name="ID_ROL" Type="Int32" />
+          <Property Name="NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APPAT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APMAT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RUT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DIRECCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TELEFONO" Type="Int32" Nullable="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USUARIO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PASS" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PREGUNTASEG1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RESPUESTASEG1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PREGUNTASEG2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RESPUESTASEG2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UCR_CLIENTE" Type="Int32" />
+          <Property Name="UAC_CLIENTE" Type="Int32" />
+          <Property Name="UEL_CLIENTE" Type="Int32" />
+          <Property Name="FCR_CLIENTE" Type="DateTime" Precision="3" />
+          <Property Name="FAC_CLIENTE" Type="DateTime" Precision="3" />
+          <Property Name="FEL_CLIENTE" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="ESTADO" Relationship="Self.FK_CLIENTE_TIENE2_ESTADO" FromRole="CLIENTE" ToRole="ESTADO" />
+          <NavigationProperty Name="ROL" Relationship="Self.FK_CLIENTE_TIENE3_ROL" FromRole="CLIENTE" ToRole="ROL" />
+          <NavigationProperty Name="RESERVA" Relationship="Self.FK_RESERVA_PERTENECE_CLIENTE" FromRole="CLIENTE" ToRole="RESERVA" />
+        </EntityType>
+        <EntityType Name="COMUNA">
+          <Key>
+            <PropertyRef Name="ID_COMUNA" />
+          </Key>
+          <Property Name="ID_COMUNA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_CIUDAD" Type="Int32" />
+          <Property Name="NOMBRE_COMUNA" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CIUDAD" Relationship="Self.FK_COMUNA_PERTENECE_CIUDAD" FromRole="COMUNA" ToRole="CIUDAD" />
+          <NavigationProperty Name="EMPRESA" Relationship="Self.FK_EMPRESA_ESTA_COMUNA" FromRole="COMUNA" ToRole="EMPRESA" />
+        </EntityType>
+        <EntityType Name="EMPLEADO">
+          <Key>
+            <PropertyRef Name="ID_EMPLEADO" />
+          </Key>
+          <Property Name="ID_EMPLEADO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_CARGO" Type="Int32" />
+          <Property Name="ID_SUCURSAL" Type="Int32" Nullable="false" />
+          <Property Name="NOMBRE_EMPLEADO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APPAT_EMPLEADO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APMAT_EMPLEADO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RUT_EMPLEADO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DIRECCION_EMPLEADO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TELEFONO_EMPLEADO" Type="Int32" Nullable="false" />
+          <Property Name="EMAIL_EMPLEADO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USUARIO_EMPLEADO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PASS_EMPLEADO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UCR_EMPLEADO" Type="Int32" Nullable="false" />
+          <Property Name="UAC_EMPLEADO" Type="Int32" />
+          <Property Name="UEL_EMPLEADO" Type="Int32" />
+          <Property Name="FCR_EMPLEADO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FAC_EMPLEADO" Type="DateTime" Precision="3" />
+          <Property Name="FEL_EMPLEADO" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CARGO" Relationship="Self.FK_EMPLEADO_UTILIZA_CARGO" FromRole="EMPLEADO" ToRole="CARGO" />
+          <NavigationProperty Name="SUCURSAL" Relationship="Self.FK_EMPLEADO_INCLUYE2_SUCURSAL" FromRole="EMPLEADO" ToRole="SUCURSAL" />
+        </EntityType>
+        <EntityType Name="EMPRESA">
+          <Key>
+            <PropertyRef Name="ID_EMPRESA" />
+          </Key>
+          <Property Name="ID_EMPRESA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_COMUNA" Type="Int32" />
+          <Property Name="NOMBRE_EMPRESA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RUT_EMPRESA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DIRECCION_EMPRESA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RUBRO_EMPRESA" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GIRO_EMPRESA" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UCR_EMPRESA" Type="Int32" Nullable="false" />
+          <Property Name="CAC_EMPRESA" Type="Int32" />
+          <Property Name="UEL_EMPRESA" Type="Int32" />
+          <Property Name="FCR_EMPRESA" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FAC_EMPRESA" Type="DateTime" Precision="3" />
+          <Property Name="FEL_EMPRESA" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="COMUNA" Relationship="Self.FK_EMPRESA_ESTA_COMUNA" FromRole="EMPRESA" ToRole="COMUNA" />
+          <NavigationProperty Name="SUCURSAL" Relationship="Self.FK_SUCURSAL_TIENE4_EMPRESA" FromRole="EMPRESA" ToRole="SUCURSAL" />
+        </EntityType>
+        <EntityType Name="ESTADO">
+          <Key>
+            <PropertyRef Name="ID_ESTADO" />
+          </Key>
+          <Property Name="ID_ESTADO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DESCRIPCION_ESTADO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CLIENTE" Relationship="Self.FK_CLIENTE_TIENE2_ESTADO" FromRole="ESTADO" ToRole="CLIENTE" />
+        </EntityType>
+        <EntityType Name="PAIS">
+          <Key>
+            <PropertyRef Name="ID_PAIS" />
+          </Key>
+          <Property Name="ID_PAIS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE_PAIS" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="REGION" Relationship="Self.FK_REGION_PERTENECE_PAIS" FromRole="PAIS" ToRole="REGION" />
+        </EntityType>
+        <EntityType Name="PRIVILEGIO">
+          <Key>
+            <PropertyRef Name="ID_PRIVILEGIO" />
+          </Key>
+          <Property Name="ID_PRIVILEGIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE_PRIVILEGIO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESCRIPCION_PRIVILEGIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="ROL" Relationship="Self.FK_ROL_INTEGRA_PRIVILEG" FromRole="PRIVILEGIO" ToRole="ROL" />
+        </EntityType>
+        <EntityType Name="REGION">
+          <Key>
+            <PropertyRef Name="ID_REGION" />
+          </Key>
+          <Property Name="ID_REGION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_PAIS" Type="Int32" />
+          <Property Name="NOMBRE_REGION" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CIUDAD" Relationship="Self.FK_CIUDAD_PERTENECE_REGION" FromRole="REGION" ToRole="CIUDAD" />
+          <NavigationProperty Name="PAIS" Relationship="Self.FK_REGION_PERTENECE_PAIS" FromRole="REGION" ToRole="PAIS" />
+        </EntityType>
+        <EntityType Name="RESERVA">
+          <Key>
+            <PropertyRef Name="ID_RESERVA" />
+          </Key>
+          <Property Name="ID_RESERVA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_SUCURSAL" Type="Int32" Nullable="false" />
+          <Property Name="ID_CLIENTE" Type="Int32" Nullable="false" />
+          <Property Name="ID_ATENCION" Type="Int32" />
+          <Property Name="TIPO_RESERVA" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HORA_RESERVA" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CLIENTE" Relationship="Self.FK_RESERVA_PERTENECE_CLIENTE" FromRole="RESERVA" ToRole="CLIENTE" />
+          <NavigationProperty Name="TIEMPO_ATENCION" Relationship="Self.FK_RESERVA_INTEGRA2_TIEMPO_A" FromRole="RESERVA" ToRole="TIEMPO_ATENCION" />
+          <NavigationProperty Name="SUCURSAL" Relationship="Self.FK_RESERVA_POSEE_SUCURSAL" FromRole="RESERVA" ToRole="SUCURSAL" />
+        </EntityType>
+        <EntityType Name="ROL">
+          <Key>
+            <PropertyRef Name="ID_ROL" />
+          </Key>
+          <Property Name="ID_ROL" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_PRIVILEGIO" Type="Int32" />
+          <Property Name="NOMBRE_ROL" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CLIENTE" Relationship="Self.FK_CLIENTE_TIENE3_ROL" FromRole="ROL" ToRole="CLIENTE" />
+          <NavigationProperty Name="PRIVILEGIO" Relationship="Self.FK_ROL_INTEGRA_PRIVILEG" FromRole="ROL" ToRole="PRIVILEGIO" />
+        </EntityType>
+        <EntityType Name="SUCURSAL">
+          <Key>
+            <PropertyRef Name="ID_SUCURSAL" />
+          </Key>
+          <Property Name="ID_SUCURSAL" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_CLASIFICACION" Type="Int32" />
+          <Property Name="ID_EMPRESA" Type="Int32" />
+          <Property Name="NOMBRE_SUCURSAL" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HORA_INICIO" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="HORA_TERMINO" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="LATITUD_SUCURSAL" Type="Decimal" Precision="20" Scale="20" />
+          <Property Name="LONGITUD_SUCURSAL" Type="Decimal" Precision="20" Scale="20" />
+          <Property Name="PRECISION_SUCURSAL" Type="Decimal" Precision="20" Scale="20" />
+          <Property Name="UCR_SUCURSAL" Type="Int32" Nullable="false" />
+          <Property Name="UAC_SUCURSAL" Type="Int32" />
+          <Property Name="UEL_SUCURSAL" Type="Int32" />
+          <Property Name="FCR_SUCURSAL" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FAC_SUCURSAL" Type="DateTime" Precision="3" />
+          <Property Name="FEL_SUCURSAL" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CLASIFICACION" Relationship="Self.FK_SUCURSAL_TIENE_CLASIFIC" FromRole="SUCURSAL" ToRole="CLASIFICACION" />
+          <NavigationProperty Name="EMPLEADO" Relationship="Self.FK_EMPLEADO_INCLUYE2_SUCURSAL" FromRole="SUCURSAL" ToRole="EMPLEADO" />
+          <NavigationProperty Name="EMPRESA" Relationship="Self.FK_SUCURSAL_TIENE4_EMPRESA" FromRole="SUCURSAL" ToRole="EMPRESA" />
+          <NavigationProperty Name="RESERVA" Relationship="Self.FK_RESERVA_POSEE_SUCURSAL" FromRole="SUCURSAL" ToRole="RESERVA" />
+        </EntityType>
+        <EntityType Name="TIEMPO_ATENCION">
+          <Key>
+            <PropertyRef Name="ID_ATENCION" />
+          </Key>
+          <Property Name="ID_ATENCION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TIEMPO_ATENCION1" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="VALOR_ATENCION" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="RESERVA" Relationship="Self.FK_RESERVA_INTEGRA2_TIEMPO_A" FromRole="TIEMPO_ATENCION" ToRole="RESERVA" />
+        </EntityType>
+        <Association Name="FK_EMPLEADO_UTILIZA_CARGO">
+          <End Role="CARGO" Type="Self.CARGO" Multiplicity="0..1" />
+          <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARGO">
+              <PropertyRef Name="ID_CARGO" />
+            </Principal>
+            <Dependent Role="EMPLEADO">
+              <PropertyRef Name="ID_CARGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CIUDAD_PERTENECE_REGION">
+          <End Role="REGION" Type="Self.REGION" Multiplicity="0..1" />
+          <End Role="CIUDAD" Type="Self.CIUDAD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="REGION">
+              <PropertyRef Name="ID_REGION" />
+            </Principal>
+            <Dependent Role="CIUDAD">
+              <PropertyRef Name="ID_REGION" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COMUNA_PERTENECE_CIUDAD">
+          <End Role="CIUDAD" Type="Self.CIUDAD" Multiplicity="0..1" />
+          <End Role="COMUNA" Type="Self.COMUNA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CIUDAD">
+              <PropertyRef Name="ID_CIUDAD" />
+            </Principal>
+            <Dependent Role="COMUNA">
+              <PropertyRef Name="ID_CIUDAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SUCURSAL_TIENE_CLASIFIC">
+          <End Role="CLASIFICACION" Type="Self.CLASIFICACION" Multiplicity="0..1" />
+          <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLASIFICACION">
+              <PropertyRef Name="ID_CLASIFICACION" />
+            </Principal>
+            <Dependent Role="SUCURSAL">
+              <PropertyRef Name="ID_CLASIFICACION" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CLIENTE_TIENE2_ESTADO">
+          <End Role="ESTADO" Type="Self.ESTADO" Multiplicity="0..1" />
+          <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESTADO">
+              <PropertyRef Name="ID_ESTADO" />
+            </Principal>
+            <Dependent Role="CLIENTE">
+              <PropertyRef Name="ID_ESTADO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CLIENTE_TIENE3_ROL">
+          <End Role="ROL" Type="Self.ROL" Multiplicity="0..1" />
+          <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROL">
+              <PropertyRef Name="ID_ROL" />
+            </Principal>
+            <Dependent Role="CLIENTE">
+              <PropertyRef Name="ID_ROL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RESERVA_PERTENECE_CLIENTE">
+          <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="1" />
+          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTE">
+              <PropertyRef Name="ID_CLIENTE" />
+            </Principal>
+            <Dependent Role="RESERVA">
+              <PropertyRef Name="ID_CLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EMPRESA_ESTA_COMUNA">
+          <End Role="COMUNA" Type="Self.COMUNA" Multiplicity="0..1" />
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COMUNA">
+              <PropertyRef Name="ID_COMUNA" />
+            </Principal>
+            <Dependent Role="EMPRESA">
+              <PropertyRef Name="ID_COMUNA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EMPLEADO_INCLUYE2_SUCURSAL">
+          <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="1" />
+          <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SUCURSAL">
+              <PropertyRef Name="ID_SUCURSAL" />
+            </Principal>
+            <Dependent Role="EMPLEADO">
+              <PropertyRef Name="ID_SUCURSAL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SUCURSAL_TIENE4_EMPRESA">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="0..1" />
+          <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Principal>
+            <Dependent Role="SUCURSAL">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGION_PERTENECE_PAIS">
+          <End Role="PAIS" Type="Self.PAIS" Multiplicity="0..1" />
+          <End Role="REGION" Type="Self.REGION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PAIS">
+              <PropertyRef Name="ID_PAIS" />
+            </Principal>
+            <Dependent Role="REGION">
+              <PropertyRef Name="ID_PAIS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ROL_INTEGRA_PRIVILEG">
+          <End Role="PRIVILEGIO" Type="Self.PRIVILEGIO" Multiplicity="0..1" />
+          <End Role="ROL" Type="Self.ROL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRIVILEGIO">
+              <PropertyRef Name="ID_PRIVILEGIO" />
+            </Principal>
+            <Dependent Role="ROL">
+              <PropertyRef Name="ID_PRIVILEGIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RESERVA_INTEGRA2_TIEMPO_A">
+          <End Role="TIEMPO_ATENCION" Type="Self.TIEMPO_ATENCION" Multiplicity="0..1" />
+          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIEMPO_ATENCION">
+              <PropertyRef Name="ID_ATENCION" />
+            </Principal>
+            <Dependent Role="RESERVA">
+              <PropertyRef Name="ID_ATENCION" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RESERVA_POSEE_SUCURSAL">
+          <End Role="SUCURSAL" Type="Self.SUCURSAL" Multiplicity="1" />
+          <End Role="RESERVA" Type="Self.RESERVA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SUCURSAL">
+              <PropertyRef Name="ID_SUCURSAL" />
+            </Principal>
+            <Dependent Role="RESERVA">
+              <PropertyRef Name="ID_SUCURSAL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="NatencionEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CARGO" EntityType="Self.CARGO" />
+          <EntitySet Name="CIUDAD" EntityType="Self.CIUDAD" />
+          <EntitySet Name="CLASIFICACION" EntityType="Self.CLASIFICACION" />
+          <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" />
+          <EntitySet Name="COMUNA" EntityType="Self.COMUNA" />
+          <EntitySet Name="EMPLEADO" EntityType="Self.EMPLEADO" />
+          <EntitySet Name="EMPRESA" EntityType="Self.EMPRESA" />
+          <EntitySet Name="ESTADO" EntityType="Self.ESTADO" />
+          <EntitySet Name="PAIS" EntityType="Self.PAIS" />
+          <EntitySet Name="PRIVILEGIO" EntityType="Self.PRIVILEGIO" />
+          <EntitySet Name="REGION" EntityType="Self.REGION" />
+          <EntitySet Name="RESERVA" EntityType="Self.RESERVA" />
+          <EntitySet Name="ROL" EntityType="Self.ROL" />
+          <EntitySet Name="SUCURSAL" EntityType="Self.SUCURSAL" />
+          <EntitySet Name="TIEMPO_ATENCION" EntityType="Self.TIEMPO_ATENCION" />
+          <AssociationSet Name="FK_EMPLEADO_UTILIZA_CARGO" Association="Self.FK_EMPLEADO_UTILIZA_CARGO">
+            <End Role="CARGO" EntitySet="CARGO" />
+            <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CIUDAD_PERTENECE_REGION" Association="Self.FK_CIUDAD_PERTENECE_REGION">
+            <End Role="REGION" EntitySet="REGION" />
+            <End Role="CIUDAD" EntitySet="CIUDAD" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COMUNA_PERTENECE_CIUDAD" Association="Self.FK_COMUNA_PERTENECE_CIUDAD">
+            <End Role="CIUDAD" EntitySet="CIUDAD" />
+            <End Role="COMUNA" EntitySet="COMUNA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SUCURSAL_TIENE_CLASIFIC" Association="Self.FK_SUCURSAL_TIENE_CLASIFIC">
+            <End Role="CLASIFICACION" EntitySet="CLASIFICACION" />
+            <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CLIENTE_TIENE2_ESTADO" Association="Self.FK_CLIENTE_TIENE2_ESTADO">
+            <End Role="ESTADO" EntitySet="ESTADO" />
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CLIENTE_TIENE3_ROL" Association="Self.FK_CLIENTE_TIENE3_ROL">
+            <End Role="ROL" EntitySet="ROL" />
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RESERVA_PERTENECE_CLIENTE" Association="Self.FK_RESERVA_PERTENECE_CLIENTE">
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EMPRESA_ESTA_COMUNA" Association="Self.FK_EMPRESA_ESTA_COMUNA">
+            <End Role="COMUNA" EntitySet="COMUNA" />
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EMPLEADO_INCLUYE2_SUCURSAL" Association="Self.FK_EMPLEADO_INCLUYE2_SUCURSAL">
+            <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+            <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SUCURSAL_TIENE4_EMPRESA" Association="Self.FK_SUCURSAL_TIENE4_EMPRESA">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGION_PERTENECE_PAIS" Association="Self.FK_REGION_PERTENECE_PAIS">
+            <End Role="PAIS" EntitySet="PAIS" />
+            <End Role="REGION" EntitySet="REGION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ROL_INTEGRA_PRIVILEG" Association="Self.FK_ROL_INTEGRA_PRIVILEG">
+            <End Role="PRIVILEGIO" EntitySet="PRIVILEGIO" />
+            <End Role="ROL" EntitySet="ROL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RESERVA_INTEGRA2_TIEMPO_A" Association="Self.FK_RESERVA_INTEGRA2_TIEMPO_A">
+            <End Role="TIEMPO_ATENCION" EntitySet="TIEMPO_ATENCION" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RESERVA_POSEE_SUCURSAL" Association="Self.FK_RESERVA_POSEE_SUCURSAL">
+            <End Role="SUCURSAL" EntitySet="SUCURSAL" />
+            <End Role="RESERVA" EntitySet="RESERVA" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NatencionModelStoreContainer" CdmEntityContainer="NatencionEntities1">
+          <EntitySetMapping Name="CARGO">
+            <EntityTypeMapping TypeName="NatencionModel.CARGO">
+              <MappingFragment StoreEntitySet="CARGO">
+                <ScalarProperty Name="ID_CARGO" ColumnName="ID_CARGO" />
+                <ScalarProperty Name="NOMBRE_CARGO" ColumnName="NOMBRE_CARGO" />
+                <ScalarProperty Name="DESCRIPCION_CARGO" ColumnName="DESCRIPCION_CARGO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CIUDAD">
+            <EntityTypeMapping TypeName="NatencionModel.CIUDAD">
+              <MappingFragment StoreEntitySet="CIUDAD">
+                <ScalarProperty Name="ID_CIUDAD" ColumnName="ID_CIUDAD" />
+                <ScalarProperty Name="ID_REGION" ColumnName="ID_REGION" />
+                <ScalarProperty Name="NOMBRE_CIUDAD" ColumnName="NOMBRE_CIUDAD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CLASIFICACION">
+            <EntityTypeMapping TypeName="NatencionModel.CLASIFICACION">
+              <MappingFragment StoreEntitySet="CLASIFICACION">
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="ID_CLASIFICACION" ColumnName="ID_CLASIFICACION" />
+                <ScalarProperty Name="NUMERO" ColumnName="NUMERO" />
+                <ScalarProperty Name="HORA" ColumnName="HORA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CLIENTE">
+            <EntityTypeMapping TypeName="NatencionModel.CLIENTE">
+              <MappingFragment StoreEntitySet="CLIENTE">
+                <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+                <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+                <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APPAT" ColumnName="APPAT" />
+                <ScalarProperty Name="APMAT" ColumnName="APMAT" />
+                <ScalarProperty Name="RUT" ColumnName="RUT" />
+                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+                <ScalarProperty Name="PASS" ColumnName="PASS" />
+                <ScalarProperty Name="PREGUNTASEG1" ColumnName="PREGUNTASEG1" />
+                <ScalarProperty Name="RESPUESTASEG1" ColumnName="RESPUESTASEG1" />
+                <ScalarProperty Name="PREGUNTASEG2" ColumnName="PREGUNTASEG2" />
+                <ScalarProperty Name="RESPUESTASEG2" ColumnName="RESPUESTASEG2" />
+                <ScalarProperty Name="UCR_CLIENTE" ColumnName="UCR_CLIENTE" />
+                <ScalarProperty Name="UAC_CLIENTE" ColumnName="UAC_CLIENTE" />
+                <ScalarProperty Name="UEL_CLIENTE" ColumnName="UEL_CLIENTE" />
+                <ScalarProperty Name="FCR_CLIENTE" ColumnName="FCR_CLIENTE" />
+                <ScalarProperty Name="FAC_CLIENTE" ColumnName="FAC_CLIENTE" />
+                <ScalarProperty Name="FEL_CLIENTE" ColumnName="FEL_CLIENTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COMUNA">
+            <EntityTypeMapping TypeName="NatencionModel.COMUNA">
+              <MappingFragment StoreEntitySet="COMUNA">
+                <ScalarProperty Name="ID_COMUNA" ColumnName="ID_COMUNA" />
+                <ScalarProperty Name="ID_CIUDAD" ColumnName="ID_CIUDAD" />
+                <ScalarProperty Name="NOMBRE_COMUNA" ColumnName="NOMBRE_COMUNA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPLEADO">
+            <EntityTypeMapping TypeName="NatencionModel.EMPLEADO">
+              <MappingFragment StoreEntitySet="EMPLEADO">
+                <ScalarProperty Name="ID_EMPLEADO" ColumnName="ID_EMPLEADO" />
+                <ScalarProperty Name="ID_CARGO" ColumnName="ID_CARGO" />
+                <ScalarProperty Name="ID_SUCURSAL" ColumnName="ID_SUCURSAL" />
+                <ScalarProperty Name="NOMBRE_EMPLEADO" ColumnName="NOMBRE_EMPLEADO" />
+                <ScalarProperty Name="APPAT_EMPLEADO" ColumnName="APPAT_EMPLEADO" />
+                <ScalarProperty Name="APMAT_EMPLEADO" ColumnName="APMAT_EMPLEADO" />
+                <ScalarProperty Name="RUT_EMPLEADO" ColumnName="RUT_EMPLEADO" />
+                <ScalarProperty Name="DIRECCION_EMPLEADO" ColumnName="DIRECCION_EMPLEADO" />
+                <ScalarProperty Name="TELEFONO_EMPLEADO" ColumnName="TELEFONO_EMPLEADO" />
+                <ScalarProperty Name="EMAIL_EMPLEADO" ColumnName="EMAIL_EMPLEADO" />
+                <ScalarProperty Name="USUARIO_EMPLEADO" ColumnName="USUARIO_EMPLEADO" />
+                <ScalarProperty Name="PASS_EMPLEADO" ColumnName="PASS_EMPLEADO" />
+                <ScalarProperty Name="UCR_EMPLEADO" ColumnName="UCR_EMPLEADO" />
+                <ScalarProperty Name="UAC_EMPLEADO" ColumnName="UAC_EMPLEADO" />
+                <ScalarProperty Name="UEL_EMPLEADO" ColumnName="UEL_EMPLEADO" />
+                <ScalarProperty Name="FCR_EMPLEADO" ColumnName="FCR_EMPLEADO" />
+                <ScalarProperty Name="FAC_EMPLEADO" ColumnName="FAC_EMPLEADO" />
+                <ScalarProperty Name="FEL_EMPLEADO" ColumnName="FEL_EMPLEADO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPRESA">
+            <EntityTypeMapping TypeName="NatencionModel.EMPRESA">
+              <MappingFragment StoreEntitySet="EMPRESA">
+                <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+                <ScalarProperty Name="ID_COMUNA" ColumnName="ID_COMUNA" />
+                <ScalarProperty Name="NOMBRE_EMPRESA" ColumnName="NOMBRE_EMPRESA" />
+                <ScalarProperty Name="RUT_EMPRESA" ColumnName="RUT_EMPRESA" />
+                <ScalarProperty Name="DIRECCION_EMPRESA" ColumnName="DIRECCION_EMPRESA" />
+                <ScalarProperty Name="RUBRO_EMPRESA" ColumnName="RUBRO_EMPRESA" />
+                <ScalarProperty Name="GIRO_EMPRESA" ColumnName="GIRO_EMPRESA" />
+                <ScalarProperty Name="UCR_EMPRESA" ColumnName="UCR_EMPRESA" />
+                <ScalarProperty Name="CAC_EMPRESA" ColumnName="CAC_EMPRESA" />
+                <ScalarProperty Name="UEL_EMPRESA" ColumnName="UEL_EMPRESA" />
+                <ScalarProperty Name="FCR_EMPRESA" ColumnName="FCR_EMPRESA" />
+                <ScalarProperty Name="FAC_EMPRESA" ColumnName="FAC_EMPRESA" />
+                <ScalarProperty Name="FEL_EMPRESA" ColumnName="FEL_EMPRESA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ESTADO">
+            <EntityTypeMapping TypeName="NatencionModel.ESTADO">
+              <MappingFragment StoreEntitySet="ESTADO">
+                <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+                <ScalarProperty Name="DESCRIPCION_ESTADO" ColumnName="DESCRIPCION_ESTADO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PAIS">
+            <EntityTypeMapping TypeName="NatencionModel.PAIS">
+              <MappingFragment StoreEntitySet="PAIS">
+                <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+                <ScalarProperty Name="NOMBRE_PAIS" ColumnName="NOMBRE_PAIS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRIVILEGIO">
+            <EntityTypeMapping TypeName="NatencionModel.PRIVILEGIO">
+              <MappingFragment StoreEntitySet="PRIVILEGIO">
+                <ScalarProperty Name="ID_PRIVILEGIO" ColumnName="ID_PRIVILEGIO" />
+                <ScalarProperty Name="NOMBRE_PRIVILEGIO" ColumnName="NOMBRE_PRIVILEGIO" />
+                <ScalarProperty Name="DESCRIPCION_PRIVILEGIO" ColumnName="DESCRIPCION_PRIVILEGIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REGION">
+            <EntityTypeMapping TypeName="NatencionModel.REGION">
+              <MappingFragment StoreEntitySet="REGION">
+                <ScalarProperty Name="ID_REGION" ColumnName="ID_REGION" />
+                <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+                <ScalarProperty Name="NOMBRE_REGION" ColumnName="NOMBRE_REGION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RESERVA">
+            <EntityTypeMapping TypeName="NatencionModel.RESERVA">
+              <MappingFragment StoreEntitySet="RESERVA">
+                <ScalarProperty Name="ID_RESERVA" ColumnName="ID_RESERVA" />
+                <ScalarProperty Name="ID_SUCURSAL" ColumnName="ID_SUCURSAL" />
+                <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+                <ScalarProperty Name="ID_ATENCION" ColumnName="ID_ATENCION" />
+                <ScalarProperty Name="TIPO_RESERVA" ColumnName="TIPO_RESERVA" />
+                <ScalarProperty Name="HORA_RESERVA" ColumnName="HORA_RESERVA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ROL">
+            <EntityTypeMapping TypeName="NatencionModel.ROL">
+              <MappingFragment StoreEntitySet="ROL">
+                <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
+                <ScalarProperty Name="ID_PRIVILEGIO" ColumnName="ID_PRIVILEGIO" />
+                <ScalarProperty Name="NOMBRE_ROL" ColumnName="NOMBRE_ROL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SUCURSAL">
+            <EntityTypeMapping TypeName="NatencionModel.SUCURSAL">
+              <MappingFragment StoreEntitySet="SUCURSAL">
+                <ScalarProperty Name="ID_SUCURSAL" ColumnName="ID_SUCURSAL" />
+                <ScalarProperty Name="ID_CLASIFICACION" ColumnName="ID_CLASIFICACION" />
+                <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+                <ScalarProperty Name="NOMBRE_SUCURSAL" ColumnName="NOMBRE_SUCURSAL" />
+                <ScalarProperty Name="HORA_INICIO" ColumnName="HORA_INICIO" />
+                <ScalarProperty Name="HORA_TERMINO" ColumnName="HORA_TERMINO" />
+                <ScalarProperty Name="LATITUD_SUCURSAL" ColumnName="LATITUD_SUCURSAL" />
+                <ScalarProperty Name="LONGITUD_SUCURSAL" ColumnName="LONGITUD_SUCURSAL" />
+                <ScalarProperty Name="PRECISION_SUCURSAL" ColumnName="PRECISION_SUCURSAL" />
+                <ScalarProperty Name="UCR_SUCURSAL" ColumnName="UCR_SUCURSAL" />
+                <ScalarProperty Name="UAC_SUCURSAL" ColumnName="UAC_SUCURSAL" />
+                <ScalarProperty Name="UEL_SUCURSAL" ColumnName="UEL_SUCURSAL" />
+                <ScalarProperty Name="FCR_SUCURSAL" ColumnName="FCR_SUCURSAL" />
+                <ScalarProperty Name="FAC_SUCURSAL" ColumnName="FAC_SUCURSAL" />
+                <ScalarProperty Name="FEL_SUCURSAL" ColumnName="FEL_SUCURSAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIEMPO_ATENCION">
+            <EntityTypeMapping TypeName="NatencionModel.TIEMPO_ATENCION">
+              <MappingFragment StoreEntitySet="TIEMPO_ATENCION">
+                <ScalarProperty Name="ID_ATENCION" ColumnName="ID_ATENCION" />
+                <ScalarProperty Name="TIEMPO_ATENCION1" ColumnName="TIEMPO_ATENCION" />
+                <ScalarProperty Name="VALOR_ATENCION" ColumnName="VALOR_ATENCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

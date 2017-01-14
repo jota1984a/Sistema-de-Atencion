@@ -1,0 +1,160 @@
+﻿@model ProyectoNAtencion.Models.EMPLEADO
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>EMPLEADO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_EMPLEADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_EMPLEADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APPAT_EMPLEADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APPAT_EMPLEADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APMAT_EMPLEADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APMAT_EMPLEADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RUT_EMPLEADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RUT_EMPLEADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIRECCION_EMPLEADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIRECCION_EMPLEADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TELEFONO_EMPLEADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TELEFONO_EMPLEADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAIL_EMPLEADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL_EMPLEADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USUARIO_EMPLEADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USUARIO_EMPLEADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PASS_EMPLEADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PASS_EMPLEADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UCR_EMPLEADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UCR_EMPLEADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UAC_EMPLEADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UAC_EMPLEADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UEL_EMPLEADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UEL_EMPLEADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FCR_EMPLEADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FCR_EMPLEADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FAC_EMPLEADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FAC_EMPLEADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FEL_EMPLEADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FEL_EMPLEADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CARGO.NOMBRE_CARGO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CARGO.NOMBRE_CARGO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SUCURSAL.NOMBRE_SUCURSAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SUCURSAL.NOMBRE_SUCURSAL)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

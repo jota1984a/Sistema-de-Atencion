@@ -80,6 +80,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -196,14 +198,83 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CARGOesController.cs" />
+    <Compile Include="Controllers\CIUDADsController.cs" />
+    <Compile Include="Controllers\CLASIFICACIONsController.cs" />
+    <Compile Include="Controllers\COMUNAsController.cs" />
+    <Compile Include="Controllers\EMPLEADOesController.cs" />
+    <Compile Include="Controllers\EMPRESAsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PAISController.cs" />
+    <Compile Include="Controllers\REGIONsController.cs" />
+    <Compile Include="Controllers\SUCURSALsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CARGO.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CIUDAD.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CLASIFICACION.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CLIENTE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\COMUNA.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMPLEADO.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EMPRESA.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ESTADO.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PAIS.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PRIVILEGIO.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\REGION.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RESERVA.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ROL.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SUCURSAL.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TIEMPO_ATENCION.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -214,10 +285,27 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -265,9 +353,55 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\CARGOes\Create.cshtml" />
+    <Content Include="Views\CARGOes\Delete.cshtml" />
+    <Content Include="Views\CARGOes\Details.cshtml" />
+    <Content Include="Views\CARGOes\Edit.cshtml" />
+    <Content Include="Views\CARGOes\Index.cshtml" />
+    <Content Include="Views\EMPLEADOes\Create.cshtml" />
+    <Content Include="Views\EMPLEADOes\Delete.cshtml" />
+    <Content Include="Views\EMPLEADOes\Details.cshtml" />
+    <Content Include="Views\EMPLEADOes\Edit.cshtml" />
+    <Content Include="Views\EMPLEADOes\Index.cshtml" />
+    <Content Include="Views\PAIS\Create.cshtml" />
+    <Content Include="Views\PAIS\Delete.cshtml" />
+    <Content Include="Views\PAIS\Details.cshtml" />
+    <Content Include="Views\PAIS\Edit.cshtml" />
+    <Content Include="Views\PAIS\Index.cshtml" />
+    <Content Include="Views\REGIONs\Create.cshtml" />
+    <Content Include="Views\REGIONs\Delete.cshtml" />
+    <Content Include="Views\REGIONs\Details.cshtml" />
+    <Content Include="Views\REGIONs\Edit.cshtml" />
+    <Content Include="Views\REGIONs\Index.cshtml" />
+    <Content Include="Views\CIUDADs\Create.cshtml" />
+    <Content Include="Views\CIUDADs\Delete.cshtml" />
+    <Content Include="Views\CIUDADs\Details.cshtml" />
+    <Content Include="Views\CIUDADs\Edit.cshtml" />
+    <Content Include="Views\CIUDADs\Index.cshtml" />
+    <Content Include="Views\COMUNAs\Create.cshtml" />
+    <Content Include="Views\COMUNAs\Delete.cshtml" />
+    <Content Include="Views\COMUNAs\Details.cshtml" />
+    <Content Include="Views\COMUNAs\Edit.cshtml" />
+    <Content Include="Views\COMUNAs\Index.cshtml" />
+    <Content Include="Views\EMPRESAs\Create.cshtml" />
+    <Content Include="Views\EMPRESAs\Delete.cshtml" />
+    <Content Include="Views\EMPRESAs\Details.cshtml" />
+    <Content Include="Views\EMPRESAs\Edit.cshtml" />
+    <Content Include="Views\EMPRESAs\Index.cshtml" />
+    <Content Include="Views\CLASIFICACIONs\Create.cshtml" />
+    <Content Include="Views\CLASIFICACIONs\Delete.cshtml" />
+    <Content Include="Views\CLASIFICACIONs\Details.cshtml" />
+    <Content Include="Views\CLASIFICACIONs\Edit.cshtml" />
+    <Content Include="Views\CLASIFICACIONs\Index.cshtml" />
+    <Content Include="Views\SUCURSALs\Create.cshtml" />
+    <Content Include="Views\SUCURSALs\Delete.cshtml" />
+    <Content Include="Views\SUCURSALs\Details.cshtml" />
+    <Content Include="Views\SUCURSALs\Edit.cshtml" />
+    <Content Include="Views\SUCURSALs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Cargo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -276,6 +410,9 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
