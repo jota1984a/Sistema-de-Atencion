@@ -130,7 +130,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CLASIFICACIONsController.cs" />
+    <Compile Include="Controllers\CLIENTEsController.cs" />
+    <Compile Include="Controllers\COMUNAsController.cs" />
+    <Compile Include="Controllers\EMPRESAsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PAISController.cs" />
+    <Compile Include="Controllers\REGIONsController.cs" />
+    <Compile Include="Controllers\SUCURSALsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -248,6 +256,42 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\EMPRESAs\Create.cshtml" />
+    <Content Include="Views\EMPRESAs\Delete.cshtml" />
+    <Content Include="Views\EMPRESAs\Details.cshtml" />
+    <Content Include="Views\EMPRESAs\Edit.cshtml" />
+    <Content Include="Views\EMPRESAs\Index.cshtml" />
+    <Content Include="Views\COMUNAs\Create.cshtml" />
+    <Content Include="Views\COMUNAs\Delete.cshtml" />
+    <Content Include="Views\COMUNAs\Details.cshtml" />
+    <Content Include="Views\COMUNAs\Edit.cshtml" />
+    <Content Include="Views\COMUNAs\Index.cshtml" />
+    <Content Include="Views\SUCURSALs\Create.cshtml" />
+    <Content Include="Views\SUCURSALs\Delete.cshtml" />
+    <Content Include="Views\SUCURSALs\Details.cshtml" />
+    <Content Include="Views\SUCURSALs\Edit.cshtml" />
+    <Content Include="Views\SUCURSALs\Index.cshtml" />
+    <Content Include="Views\CLASIFICACIONs\Create.cshtml" />
+    <Content Include="Views\CLASIFICACIONs\Delete.cshtml" />
+    <Content Include="Views\CLASIFICACIONs\Details.cshtml" />
+    <Content Include="Views\CLASIFICACIONs\Edit.cshtml" />
+    <Content Include="Views\CLASIFICACIONs\Index.cshtml" />
+    <Content Include="Views\PAIS\Create.cshtml" />
+    <Content Include="Views\PAIS\Delete.cshtml" />
+    <Content Include="Views\PAIS\Details.cshtml" />
+    <Content Include="Views\PAIS\Edit.cshtml" />
+    <Content Include="Views\PAIS\Index.cshtml" />
+    <Content Include="Views\REGIONs\Create.cshtml" />
+    <Content Include="Views\REGIONs\Delete.cshtml" />
+    <Content Include="Views\REGIONs\Details.cshtml" />
+    <Content Include="Views\REGIONs\Edit.cshtml" />
+    <Content Include="Views\REGIONs\Index.cshtml" />
+    <Content Include="Views\CLIENTEs\Create.cshtml" />
+    <Content Include="Views\CLIENTEs\Delete.cshtml" />
+    <Content Include="Views\CLIENTEs\Details.cshtml" />
+    <Content Include="Views\CLIENTEs\Edit.cshtml" />
+    <Content Include="Views\CLIENTEs\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

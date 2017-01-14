@@ -1,0 +1,111 @@
+﻿@model IEnumerable<Natencion.Models.SUCURSAL>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE_SUCURSAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HORA_INICIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HORA_TERMINO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LATITUD_SUCURSAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LONGITUD_SUCURSAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRECISION_SUCURSAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UCR_SUCURSAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UAC_SUCURSAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UEL_SUCURSAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FCR_SUCURSAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FAC_SUCURSAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FEL_SUCURSAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLASIFICACION.NUMERO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMPRESA.NOMBRE_EMPRESA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE_SUCURSAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HORA_INICIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HORA_TERMINO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LATITUD_SUCURSAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LONGITUD_SUCURSAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRECISION_SUCURSAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UCR_SUCURSAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UAC_SUCURSAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UEL_SUCURSAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FCR_SUCURSAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FAC_SUCURSAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FEL_SUCURSAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLASIFICACION.NUMERO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMPRESA.NOMBRE_EMPRESA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_SUCURSAL }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_SUCURSAL }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_SUCURSAL })
+        </td>
+    </tr>
+}
+
+</table>

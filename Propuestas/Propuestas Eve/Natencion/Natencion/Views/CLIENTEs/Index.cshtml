@@ -1,0 +1,153 @@
+﻿@model IEnumerable<Natencion.Models.CLIENTE>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APPAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APMAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RUT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIRECCION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TELEFONO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USUARIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PASS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PREGUNTASEG1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RESPUESTASEG1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PREGUNTASEG2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RESPUESTASEG2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UCR_CLIENTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UAC_CLIENTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UEL_CLIENTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FCR_CLIENTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FAC_CLIENTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FEL_CLIENTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTADO.DESCRIPCION_ESTADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ROL.NOMBRE_ROL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APPAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APMAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RUT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIRECCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TELEFONO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMAIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USUARIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PASS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PREGUNTASEG1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RESPUESTASEG1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PREGUNTASEG2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RESPUESTASEG2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UCR_CLIENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UAC_CLIENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UEL_CLIENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FCR_CLIENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FAC_CLIENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FEL_CLIENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO.DESCRIPCION_ESTADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ROL.NOMBRE_ROL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_CLIENTE }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_CLIENTE }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_CLIENTE })
+        </td>
+    </tr>
+}
+
+</table>
