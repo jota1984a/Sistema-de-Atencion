@@ -1,0 +1,120 @@
+﻿@model Natencion.Models.EMPRESA
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>EMPRESA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_EMPRESA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_EMPRESA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RUT_EMPRESA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RUT_EMPRESA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIRECCION_EMPRESA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIRECCION_EMPRESA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RUBRO_EMPRESA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RUBRO_EMPRESA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GIRO_EMPRESA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GIRO_EMPRESA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UCR_EMPRESA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UCR_EMPRESA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAC_EMPRESA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAC_EMPRESA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UEL_EMPRESA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UEL_EMPRESA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FCR_EMPRESA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FCR_EMPRESA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FAC_EMPRESA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FAC_EMPRESA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FEL_EMPRESA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FEL_EMPRESA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COMUNA.NOMBRE_COMUNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COMUNA.NOMBRE_COMUNA)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

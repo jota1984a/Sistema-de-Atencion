@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Natencion.Models.EMPRESA>
+
+@{
+    ViewBag.Title = "Index";
+}
+    
+<h2>Empresas</h2>
+
+<p>
+    @Html.ActionLink("Crear nueva empresa", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Nombre de Empresa
+        </th>
+        <th>
+            Rut Empresa
+        </th>
+        <th>
+            Dirección Empresa
+        </th>
+        <th>
+            Rubro Empresa
+        </th>
+        <th>
+            Giro Empresa
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UCR_EMPRESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CAC_EMPRESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UEL_EMPRESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FCR_EMPRESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FAC_EMPRESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FEL_EMPRESA)
+        </th>
+        <th>
+            Comuna Empresa
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RUT_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIRECCION_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RUBRO_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GIRO_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UCR_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CAC_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UEL_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FCR_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FAC_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FEL_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMUNA.NOMBRE_COMUNA)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.ID_EMPRESA }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.ID_EMPRESA }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.ID_EMPRESA })
+        </td>
+    </tr>
+}
+
+</table>
