@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      Microsoft SQL Server 2014                    */
-/* Created on:     13/01/2017 20:43:02                          */
+/* Created on:     14/01/2017 15:03:30                          */
 /*==============================================================*/
 
 
@@ -391,7 +391,7 @@ create table CLIENTE (
    TELEFONO             int                  not null,
    EMAIL                varchar(30)          not null,
    USUARIO              varchar(15)          not null,
-   PASS                 varchar(18)          not null,
+   PASS                 varchar(32)          not null,
    PREGUNTASEG1         varchar(30)          not null,
    RESPUESTASEG1        varchar(30)          not null,
    PREGUNTASEG2         varchar(30)          not null,
