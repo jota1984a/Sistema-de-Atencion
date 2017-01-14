@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      Microsoft SQL Server 2014                    */
-/* Created on:     11/01/2017 20:20:26                          */
+/* Created on:     13/01/2017 20:43:02                          */
 /*==============================================================*/
 
 
@@ -337,7 +337,7 @@ go
 /* Table: CARGO                                                 */
 /*==============================================================*/
 create table CARGO (
-   ID_CARGO             int                  not null,
+   ID_CARGO             int                  identity,
    NOMBRE_CARGO         varchar(15)          not null,
    DESCRIPCION_CARGO    varchar(300)         null,
    constraint PK_CARGO primary key (ID_CARGO)
@@ -348,7 +348,7 @@ go
 /* Table: CIUDAD                                                */
 /*==============================================================*/
 create table CIUDAD (
-   ID_CIUDAD            int                  not null,
+   ID_CIUDAD            int                  identity,
    ID_REGION            int                  null,
    NOMBRE_CIUDAD        varchar(25)          not null,
    constraint PK_CIUDAD primary key (ID_CIUDAD)
@@ -369,7 +369,7 @@ go
 /* Table: CLASIFICACION                                         */
 /*==============================================================*/
 create table CLASIFICACION (
-   ID_CLASIFICACION     int                  not null,
+   ID_CLASIFICACION     int                  identity,
    NUMERO               varchar(4)           not null,
    HORA                 datetime             not null,
    constraint PK_CLASIFICACION primary key (ID_CLASIFICACION)
@@ -380,7 +380,7 @@ go
 /* Table: CLIENTE                                               */
 /*==============================================================*/
 create table CLIENTE (
-   ID_CLIENTE           int                  not null,
+   ID_CLIENTE           int                  identity,
    ID_ESTADO            int                  null,
    ID_ROL               int                  null,
    NOMBRE               varchar(20)          not null,
@@ -430,7 +430,7 @@ go
 /* Table: COMUNA                                                */
 /*==============================================================*/
 create table COMUNA (
-   ID_COMUNA            int                  not null,
+   ID_COMUNA            int                  identity,
    ID_CIUDAD            int                  null,
    NOMBRE_COMUNA        varchar(25)          not null,
    constraint PK_COMUNA primary key (ID_COMUNA)
@@ -451,7 +451,7 @@ go
 /* Table: EMPLEADO                                              */
 /*==============================================================*/
 create table EMPLEADO (
-   ID_EMPLEADO          int                  not null,
+   ID_EMPLEADO          int                  identity,
    ID_CARGO             int                  null,
    ID_SUCURSAL          int                  not null,
    NOMBRE_EMPLEADO      varchar(20)          not null,
@@ -497,7 +497,7 @@ go
 /* Table: EMPRESA                                               */
 /*==============================================================*/
 create table EMPRESA (
-   ID_EMPRESA           int                  not null,
+   ID_EMPRESA           int                  identity,
    ID_COMUNA            int                  null,
    NOMBRE_EMPRESA       varchar(50)          not null,
    RUT_EMPRESA          varchar(10)          not null,
@@ -528,7 +528,7 @@ go
 /* Table: ESTADO                                                */
 /*==============================================================*/
 create table ESTADO (
-   ID_ESTADO            int                  not null,
+   ID_ESTADO            int                  identity,
    DESCRIPCION_ESTADO   varchar(15)          not null,
    constraint PK_ESTADO primary key (ID_ESTADO)
 )
@@ -538,7 +538,7 @@ go
 /* Table: PAIS                                                  */
 /*==============================================================*/
 create table PAIS (
-   ID_PAIS              int                  not null,
+   ID_PAIS              int                  identity,
    NOMBRE_PAIS          varchar(25)          not null,
    constraint PK_PAIS primary key (ID_PAIS)
 )
@@ -548,7 +548,7 @@ go
 /* Table: PRIVILEGIO                                            */
 /*==============================================================*/
 create table PRIVILEGIO (
-   ID_PRIVILEGIO        int                  not null,
+   ID_PRIVILEGIO        int                  identity,
    NOMBRE_PRIVILEGIO    varchar(15)          not null,
    DESCRIPCION_PRIVILEGIO varchar(50)          not null,
    constraint PK_PRIVILEGIO primary key (ID_PRIVILEGIO)
@@ -559,7 +559,7 @@ go
 /* Table: REGION                                                */
 /*==============================================================*/
 create table REGION (
-   ID_REGION            int                  not null,
+   ID_REGION            int                  identity,
    ID_PAIS              int                  null,
    NOMBRE_REGION        varchar(25)          not null,
    constraint PK_REGION primary key (ID_REGION)
@@ -580,7 +580,7 @@ go
 /* Table: RESERVA                                               */
 /*==============================================================*/
 create table RESERVA (
-   ID_RESERVA           int                  not null,
+   ID_RESERVA           int                  identity,
    ID_SUCURSAL          int                  not null,
    ID_CLIENTE           int                  not null,
    ID_ATENCION          int                  null,
@@ -624,7 +624,7 @@ go
 /* Table: ROL                                                   */
 /*==============================================================*/
 create table ROL (
-   ID_ROL               int                  not null,
+   ID_ROL               int                  identity,
    ID_PRIVILEGIO        int                  null,
    NOMBRE_ROL           varchar(15)          not null,
    constraint PK_ROL primary key (ID_ROL)
@@ -645,10 +645,12 @@ go
 /* Table: SUCURSAL                                              */
 /*==============================================================*/
 create table SUCURSAL (
-   ID_SUCURSAL          int                  not null,
+   ID_SUCURSAL          int                  identity,
    ID_CLASIFICACION     int                  null,
    ID_EMPRESA           int                  null,
    NOMBRE_SUCURSAL      varchar(25)          not null,
+   HORA_INICIO          time                 not null,
+   HORA_TERMINO         time                 not null,
    LATITUD_SUCURSAL     decimal(20)          not null,
    LONGITUD_SUCURSAL    decimal(20)          not null,
    PRECISION_SUCURSAL   decimal(20)          not null,
@@ -686,7 +688,7 @@ go
 /* Table: TIEMPO_ATENCION                                       */
 /*==============================================================*/
 create table TIEMPO_ATENCION (
-   ID_ATENCION          int                  not null,
+   ID_ATENCION          int                  identity,
    TIEMPO_ATENCION      datetime             not null,
    VALOR_ATENCION       int                  not null,
    constraint PK_TIEMPO_ATENCION primary key (ID_ATENCION)
