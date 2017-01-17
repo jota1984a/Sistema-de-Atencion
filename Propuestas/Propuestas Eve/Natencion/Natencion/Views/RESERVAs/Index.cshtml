@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>	</title>
+</head>
+<body>
+    <input type="button" onclick="Leer()" />
+    <div id="midiv"></div>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+ function Leer()
+{
+	$.ajax({
+	    url: 'http://localhost:55777/Reservas/ObtenerListaReserva',
+        method:'GET',
+		success:function(res){
+					console.log(res);
+		},
+		error:function(a,b,c){
+			console.log(a);
+			console.log(b);
+			console.log(c);
+		}
+	});
+
+}
+</script>

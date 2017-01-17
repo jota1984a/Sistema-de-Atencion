@@ -21,15 +21,15 @@ namespace Natencion.Controllers
             {
                 try
                 {
-                    CLIENTE e = (CLIENTE)Session["sesion"];
-                    return View("Index");
+                    EMPLEADO e = (EMPLEADO)Session["sesion"];
+                    return View("LoginEmpleado");
                 }
                 catch (Exception)
                 {
                     try
                     {
                         CLIENTE c = (CLIENTE)Session["sesion"];
-                        return View("Index", db.TIEMPO_ATENCION.ToList());//Debe ir al Json
+                        return View("LoginCliente");//Debe ir al Json
                     }
                     catch (Exception)
                     {
@@ -52,7 +52,7 @@ namespace Natencion.Controllers
             {
                 Session["usuario"] = c.USUARIO;
                 Session["sesion"] = c;
-                return View("Index");
+                return View("LoginCliente");
             }
 
             EMPLEADO e = db.EMPLEADO.SingleOrDefault(x => x.USUARIO_EMPLEADO == user && x.PASS_EMPLEADO == pass);
@@ -60,7 +60,7 @@ namespace Natencion.Controllers
             {
                 Session["usuario"] = e.NOMBRE_EMPLEADO;
                 Session["sesion"] = e;
-                return View("Index");
+                return View("LoginEmpleado");
             }
             else
             {

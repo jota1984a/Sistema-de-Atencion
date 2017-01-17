@@ -3,19 +3,11 @@
     ViewBag.Title = "Index";
 }
 
-@*<div>
-        @ViewData["CurrentTime"]
-    </div>*@
-
 <h1>Iniciar Sesion</h1>
 
-@*<div class="row">
-    <div class="col-md-6">
-        <h2 id="alinearIzq">Clientes</h2>
-    <div>*@
+
 <h3>Ingrese su Usuario y Contraseña</h3>
 <hr />
-@*@using (Html.BeginForm("LoginCliente", "Login", FormMethod.Post, new { @class = "form-horizontal" }))*@
 @using (Html.BeginForm("LoginGenerico", "Login", FormMethod.Post, new { @class = "form-horizontal", id = "centrar" }))
 {
     <div class="form-group">
@@ -42,49 +34,11 @@
                     </div>
                 </div>
 }
-@*</div>
-
-
-
-        <div class="col-md-6">
-            <section id="socialLoginForm">
-                <h2 id="alinearIzq">Empleados</h2>
-                <hr />
-
-                @using (Html.BeginForm("LoginEmpleado", "Login", FormMethod.Post, new { @class = "form-horizontal" }))
-                {
-
-                        <div class="form-group">
-                            <label class="col-md-2 control-label">Usuario</label>
-                            <div class="col-md-10">
-                                <input type="text" class="form-control" name="user" placeholder="Usuario" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-2 control-label">Contraseña</label>
-                            <div class="col-md-10">
-                                <input type="password" class="form-control" name="pass" placeholder="Contraseña" />
-                            </div>
-                        </div>
-
-                        <div class="alert-danger text-center">
-                            @ViewData["ErrorLoginE"]
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-offset-2 col-md-10">
-                                <input type="submit" value="Iniciar sesión" class="btn btn-primary btn-lg" />
-                            </div>
-                        </div>
-                }
-            </section>
-        </div>
-    </div>*@
 
 <p class="lead" id="imgProd"></p>
 <hr />
 <footer>
-    <p>&copy; @DateTime.Now.Year - Asdasdas</p>
+    <p>&copy; @DateTime.Now.Year - AtentionFirst</p>
 </footer>
 
 

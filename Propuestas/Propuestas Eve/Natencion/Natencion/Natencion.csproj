@@ -138,6 +138,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PAISController.cs" />
     <Compile Include="Controllers\REGIONsController.cs" />
+    <Compile Include="Controllers\ReservaController.cs" />
     <Compile Include="Controllers\SUCURSALsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -292,9 +293,17 @@
     <Content Include="Views\CLIENTEs\Edit.cshtml" />
     <Content Include="Views\CLIENTEs\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\LoginCliente.cshtml" />
+    <Content Include="Views\RESERVAs\Create.cshtml" />
+    <Content Include="Views\RESERVAs\Delete.cshtml" />
+    <Content Include="Views\RESERVAs\Details.cshtml" />
+    <Content Include="Views\RESERVAs\Edit.cshtml" />
+    <Content Include="Views\RESERVAs\Index.cshtml" />
+    <Content Include="Views\Login\LoginEmpleado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Reserva\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

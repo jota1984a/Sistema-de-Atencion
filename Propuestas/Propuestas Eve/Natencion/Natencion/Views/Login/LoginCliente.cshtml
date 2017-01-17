@@ -1,0 +1,30 @@
+﻿@model IEnumerable < Natencion.Models.RESERVA>
+
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $(".itemMenu").click(function (e) {
+                e.preventDefault();
+                var pagina = $(this).attr("href");
+                $.ajax({
+                    url: pagina,
+                    success: function (res) {
+                        //alert('OK');
+                        $("#contenedor").html(res);
+                    }
+                });
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+    <h1>¡Reserva tu Número!</h1>
+    <h3>Haz tus reservas con anticipación y asegura tu atención</h3>
+  
+ 
+</body>
+</html>

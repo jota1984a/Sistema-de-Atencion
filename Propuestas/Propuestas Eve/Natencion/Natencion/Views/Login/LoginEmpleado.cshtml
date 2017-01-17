@@ -1,0 +1,85 @@
+﻿<html>
+<head>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $(".itemMenu").click(function (e) {
+                e.preventDefault();
+                var pagina = $(this).attr("href");
+                $.ajax({
+                    url: pagina,
+                    success: function (res) {
+                        $("#contenedor").html(res);
+                    }
+                });
+            });
+        });
+
+        function buscarAjax() {
+
+            var pagina = "/" + $("#control").val() + "/Buscar";
+
+            $.ajax({
+                @*url: '@Url.Action("Buscar", "CLIENTES")',*@
+                url: pagina,
+                data: { buscar: $("#txBusqueda").val() },
+                type: "post",
+                cache: false,
+                success: function (retorno) {
+                    $("#contenedor").html(retorno);
+                },
+            });
+        }
+
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h3>Administración del Sitio</h3>
+
+        <div>
+            <form>
+                <a class="btn btn-default" href="/Login/LoginCliente">Realizar Venta</a>
+            </form>
+        </div>
+        <div class="pull-right">
+
+
+            <select name="tablas" id="control">
+                <option value="CLIENTES" selected>Cliente</option>
+                <option value="EMPLEADOS">Empleado</option>
+                <option value="SUCURSALES">Sucursales</option>
+                <option value="CLASIFICACION">Clasificación</option>
+
+            </select>
+
+            <input type="text" id="txBusqueda" name="buscar" />
+            <input id="btBuscar" onclick="javascript:buscarAjax();" type="button" value="Buscar" />
+        </div>
+
+        <hr />
+
+        <div class="row">
+
+            <div class="col-sm-2">
+                <nav class="nav-sidebar">
+                    <ul class="nav">
+                        <li class="active"><a href="javascript:;">Menu</a></li>
+                        <li><a class="itemMenu" href="/CLIENTES/">Clientes<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-user"></span></a></li>
+                        <li><a class="itemMenu" href="/SUCURSALES/">Sucursales<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-home"></span></a></li>
+                        <li><a class="itemMenu" href="/CLASIFICACION/">Clasificación<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-ok-sign"></span></a></li>
+                        <li><a class="itemMenu" href="/EMPLEADOS/">Empleados<span style="font-size:16px;" class="pull-right showopacity glyphicon glyphicon-user"></span></a></li>
+
+                    </ul>
+                </nav>
+            </div>
+
+            <section class="col-sm-9" id="contenedor"></section>
+
+        </div>
+    </div>
+
+</body>
+</html>
