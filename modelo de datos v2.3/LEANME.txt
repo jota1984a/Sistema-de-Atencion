@@ -1,0 +1,3 @@
+Nombre bdd: Natencion
+user: root
+pass: admin
