@@ -1857,7 +1857,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o13">
-<a:Rect>((30948,3813), (49999,5467))</a:Rect>
+<a:Rect>((30948,3813), (49999,5304))</a:Rect>
 <a:ListOfPoints>((31348,4438),(47887,4438))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
@@ -1897,7 +1897,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o19">
-<a:Rect>((3577,14030), (24845,15679))</a:Rect>
+<a:Rect>((3577,14030), (24845,15526))</a:Rect>
 <a:ListOfPoints>((3977,14655),(24445,14655))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
@@ -1937,7 +1937,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o25">
-<a:Rect>((-56755,15483), (-29823,17115))</a:Rect>
+<a:Rect>((-56755,15483), (-29823,16982))</a:Rect>
 <a:ListOfPoints>((-30223,16108),(-56355,16108))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
@@ -2057,7 +2057,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </c:Object>
 </o:ReferenceSymbol>
 <o:ReferenceSymbol Id="o45">
-<a:Rect>((-23280,12805), (-1333,14943))</a:Rect>
+<a:Rect>((-23280,12650), (-1333,14943))</a:Rect>
 <a:ListOfPoints>((-22880,13404),(-9013,13404),(-9013,14318),(-2934,14318))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
@@ -2466,11 +2466,13 @@ DAT 1484778868</a:History>
 <a:Code>ID_CLIENTE</a:Code>
 <a:CreationDate>1484778866</a:CreationDate>
 <a:Creator>maxco</a:Creator>
-<a:ModificationDate>1484778866</a:ModificationDate>
+<a:ModificationDate>1484876067</a:ModificationDate>
 <a:Modifier>maxco</a:Modifier>
 <a:History>ORG {7DCC0A3F-9AA2-4F86-AF16-E3CA72A8C378}
-DAT 1484778868</a:History>
+DAT 1484778868
+ATT IDNT</a:History>
 <a:DataType>int</a:DataType>
+<a:Identity>1</a:Identity>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
 <o:Column Id="o65">
@@ -2869,11 +2871,13 @@ DAT 1484778868</a:History>
 <a:Code>ID_CARGO</a:Code>
 <a:CreationDate>1484778866</a:CreationDate>
 <a:Creator>maxco</a:Creator>
-<a:ModificationDate>1484778866</a:ModificationDate>
+<a:ModificationDate>1484876094</a:ModificationDate>
 <a:Modifier>maxco</a:Modifier>
 <a:History>ORG {7EC161F0-49E2-4D85-8EA3-D64B8117C3F0}
-DAT 1484778868</a:History>
+DAT 1484778868
+ATT IDNT</a:History>
 <a:DataType>int</a:DataType>
+<a:Identity>1</a:Identity>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
 <o:Column Id="o94">
@@ -2972,11 +2976,13 @@ DAT 1484778868</a:History>
 <a:Code>ID_EMPLEADO</a:Code>
 <a:CreationDate>1484778866</a:CreationDate>
 <a:Creator>maxco</a:Creator>
-<a:ModificationDate>1484778866</a:ModificationDate>
+<a:ModificationDate>1484876082</a:ModificationDate>
 <a:Modifier>maxco</a:Modifier>
 <a:History>ORG {4A346CCD-0805-446F-8A48-C3C666CF12BD}
-DAT 1484778868</a:History>
+DAT 1484778868
+ATT IDNT</a:History>
 <a:DataType>int</a:DataType>
+<a:Identity>1</a:Identity>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
 <o:Column Id="o100">
@@ -3322,11 +3328,13 @@ DAT 1484778868</a:History>
 <a:Code>ID_ESTADO</a:Code>
 <a:CreationDate>1484778866</a:CreationDate>
 <a:Creator>maxco</a:Creator>
-<a:ModificationDate>1484778866</a:ModificationDate>
+<a:ModificationDate>1484876058</a:ModificationDate>
 <a:Modifier>maxco</a:Modifier>
 <a:History>ORG {27CE8C18-F558-4F05-AE69-B3C3EFE5516E}
-DAT 1484778868</a:History>
+DAT 1484778868
+ATT IDNT</a:History>
 <a:DataType>int</a:DataType>
+<a:Identity>1</a:Identity>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
 <o:Column Id="o125">
@@ -3412,11 +3420,13 @@ DAT 1484778868</a:History>
 <a:Code>ID_ROL</a:Code>
 <a:CreationDate>1484778866</a:CreationDate>
 <a:Creator>maxco</a:Creator>
-<a:ModificationDate>1484778866</a:ModificationDate>
+<a:ModificationDate>1484876038</a:ModificationDate>
 <a:Modifier>maxco</a:Modifier>
 <a:History>ORG {E2B6C61B-A85C-40D2-AA0F-8E5F23B8071A}
-DAT 1484778868</a:History>
+DAT 1484778868
+ATT IDNT</a:History>
 <a:DataType>int</a:DataType>
+<a:Identity>1</a:Identity>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
 <o:Column Id="o130">
@@ -3502,11 +3512,13 @@ DAT 1484778868</a:History>
 <a:Code>ID_PRIVILEGIO</a:Code>
 <a:CreationDate>1484778866</a:CreationDate>
 <a:Creator>maxco</a:Creator>
-<a:ModificationDate>1484778866</a:ModificationDate>
+<a:ModificationDate>1484876047</a:ModificationDate>
 <a:Modifier>maxco</a:Modifier>
 <a:History>ORG {AC1EC1C5-CCC1-442F-8218-75237017F5F2}
-DAT 1484778868</a:History>
+DAT 1484778868
+ATT IDNT</a:History>
 <a:DataType>int</a:DataType>
+<a:Identity>1</a:Identity>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
 <o:Column Id="o135">
@@ -3643,11 +3655,13 @@ DAT 1484778868</a:History>
 <a:Code>ID_CLASIFICACION</a:Code>
 <a:CreationDate>1484778866</a:CreationDate>
 <a:Creator>maxco</a:Creator>
-<a:ModificationDate>1484778866</a:ModificationDate>
+<a:ModificationDate>1484876105</a:ModificationDate>
 <a:Modifier>maxco</a:Modifier>
 <a:History>ORG {1C98AC71-21CE-4DAC-96A2-EA9D89A7DF33}
-DAT 1484778868</a:History>
+DAT 1484778868
+ATT IDNT</a:History>
 <a:DataType>int</a:DataType>
+<a:Identity>1</a:Identity>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
 <o:Column Id="o144">
@@ -3746,11 +3760,13 @@ DAT 1484778868</a:History>
 <a:Code>ID_SUCURSAL</a:Code>
 <a:CreationDate>1484778866</a:CreationDate>
 <a:Creator>maxco</a:Creator>
-<a:ModificationDate>1484778866</a:ModificationDate>
+<a:ModificationDate>1484876111</a:ModificationDate>
 <a:Modifier>maxco</a:Modifier>
 <a:History>ORG {450615BB-98BC-46F9-9CBC-9A5E97FAD658}
-DAT 1484778868</a:History>
+DAT 1484778868
+ATT IDNT</a:History>
 <a:DataType>int</a:DataType>
+<a:Identity>1</a:Identity>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
 <o:Column Id="o150">
@@ -4012,11 +4028,13 @@ DAT 1484778868</a:History>
 <a:Code>ID_RESERVA</a:Code>
 <a:CreationDate>1484778866</a:CreationDate>
 <a:Creator>maxco</a:Creator>
-<a:ModificationDate>1484778866</a:ModificationDate>
+<a:ModificationDate>1484876120</a:ModificationDate>
 <a:Modifier>maxco</a:Modifier>
 <a:History>ORG {649EB7CD-979B-428E-94FA-753861B479F7}
-DAT 1484778868</a:History>
+DAT 1484778868
+ATT IDNT</a:History>
 <a:DataType>int</a:DataType>
+<a:Identity>1</a:Identity>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
 <o:Column Id="o169">
@@ -4227,11 +4245,13 @@ DAT 1484778868</a:History>
 <a:Code>ID_ATENCION</a:Code>
 <a:CreationDate>1484778866</a:CreationDate>
 <a:Creator>maxco</a:Creator>
-<a:ModificationDate>1484778866</a:ModificationDate>
+<a:ModificationDate>1484876153</a:ModificationDate>
 <a:Modifier>maxco</a:Modifier>
 <a:History>ORG {6371C790-4096-4A83-9D4A-EFC1C6D7D0F3}
-DAT 1484778868</a:History>
+DAT 1484778868
+ATT IDNT</a:History>
 <a:DataType>int</a:DataType>
+<a:Identity>1</a:Identity>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
 <o:Column Id="o184">
@@ -4329,11 +4349,13 @@ DAT 1484778868</a:History>
 <a:Code>ID_EMPRESA</a:Code>
 <a:CreationDate>1484778866</a:CreationDate>
 <a:Creator>maxco</a:Creator>
-<a:ModificationDate>1484778866</a:ModificationDate>
+<a:ModificationDate>1484876130</a:ModificationDate>
 <a:Modifier>maxco</a:Modifier>
 <a:History>ORG {38645B91-0D91-4B90-A5FB-F37C9BFE6EC4}
-DAT 1484778868</a:History>
+DAT 1484778868
+ATT IDNT</a:History>
 <a:DataType>int</a:DataType>
+<a:Identity>1</a:Identity>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
 <o:Column Id="o190">
@@ -4586,11 +4608,13 @@ DAT 1484778868</a:History>
 <a:Code>ID_PAIS</a:Code>
 <a:CreationDate>1484778866</a:CreationDate>
 <a:Creator>maxco</a:Creator>
-<a:ModificationDate>1484778866</a:ModificationDate>
+<a:ModificationDate>1484876146</a:ModificationDate>
 <a:Modifier>maxco</a:Modifier>
 <a:History>ORG {A185384C-2296-41C5-BAAC-DA026FC25B71}
-DAT 1484778868</a:History>
+DAT 1484778868
+ATT IDNT</a:History>
 <a:DataType>int</a:DataType>
+<a:Identity>1</a:Identity>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
 <o:Column Id="o208">
@@ -4676,11 +4700,13 @@ DAT 1484778868</a:History>
 <a:Code>ID_COMUNA</a:Code>
 <a:CreationDate>1484778866</a:CreationDate>
 <a:Creator>maxco</a:Creator>
-<a:ModificationDate>1484778866</a:ModificationDate>
+<a:ModificationDate>1484876138</a:ModificationDate>
 <a:Modifier>maxco</a:Modifier>
 <a:History>ORG {638259D6-3B41-4453-AF60-412974A8B2F3}
-DAT 1484778868</a:History>
+DAT 1484778868
+ATT IDNT</a:History>
 <a:DataType>int</a:DataType>
+<a:Identity>1</a:Identity>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
 <o:Column Id="o213">
@@ -4803,11 +4829,13 @@ DAT 1484778868</a:History>
 <a:Code>ID_REGION</a:Code>
 <a:CreationDate>1484778866</a:CreationDate>
 <a:Creator>maxco</a:Creator>
-<a:ModificationDate>1484778866</a:ModificationDate>
+<a:ModificationDate>1484876167</a:ModificationDate>
 <a:Modifier>maxco</a:Modifier>
 <a:History>ORG {65F37627-BB23-482D-B51D-3E6FAC41D475}
-DAT 1484778868</a:History>
+DAT 1484778868
+ATT IDNT</a:History>
 <a:DataType>int</a:DataType>
+<a:Identity>1</a:Identity>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
 <o:Column Id="o221">
@@ -4930,11 +4958,13 @@ DAT 1484778868</a:History>
 <a:Code>ID_CIUDAD</a:Code>
 <a:CreationDate>1484778866</a:CreationDate>
 <a:Creator>maxco</a:Creator>
-<a:ModificationDate>1484778866</a:ModificationDate>
+<a:ModificationDate>1484876160</a:ModificationDate>
 <a:Modifier>maxco</a:Modifier>
 <a:History>ORG {F1681A78-A388-4727-9197-6610F7452C51}
-DAT 1484778868</a:History>
+DAT 1484778868
+ATT IDNT</a:History>
 <a:DataType>int</a:DataType>
+<a:Identity>1</a:Identity>
 <a:Column.Mandatory>1</a:Column.Mandatory>
 </o:Column>
 <o:Column Id="o229">
