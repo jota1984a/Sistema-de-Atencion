@@ -201,14 +201,20 @@
     <Compile Include="Controllers\CARGOesController.cs" />
     <Compile Include="Controllers\CIUDADsController.cs" />
     <Compile Include="Controllers\CLASIFICACIONsController.cs" />
+    <Compile Include="Controllers\CLIENTEsController.cs" />
     <Compile Include="Controllers\COMUNAsController.cs" />
     <Compile Include="Controllers\EMPLEADOesController.cs" />
     <Compile Include="Controllers\EMPRESAsController.cs" />
+    <Compile Include="Controllers\ESTADOesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PAISController.cs" />
+    <Compile Include="Controllers\PRIVILEGIOsController.cs" />
     <Compile Include="Controllers\REGIONsController.cs" />
+    <Compile Include="Controllers\RESERVAsController.cs" />
+    <Compile Include="Controllers\ROLsController.cs" />
     <Compile Include="Controllers\SUCURSALsController.cs" />
+    <Compile Include="Controllers\TIEMPO_ATENCIONController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -285,6 +291,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="HtmlPage1.html" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -315,6 +322,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\mapa.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -398,6 +406,36 @@
     <Content Include="Views\SUCURSALs\Details.cshtml" />
     <Content Include="Views\SUCURSALs\Edit.cshtml" />
     <Content Include="Views\SUCURSALs\Index.cshtml" />
+    <Content Include="Views\TIEMPO_ATENCION\Create.cshtml" />
+    <Content Include="Views\TIEMPO_ATENCION\Delete.cshtml" />
+    <Content Include="Views\TIEMPO_ATENCION\Details.cshtml" />
+    <Content Include="Views\TIEMPO_ATENCION\Edit.cshtml" />
+    <Content Include="Views\TIEMPO_ATENCION\Index.cshtml" />
+    <Content Include="Views\ROLs\Create.cshtml" />
+    <Content Include="Views\ROLs\Delete.cshtml" />
+    <Content Include="Views\ROLs\Details.cshtml" />
+    <Content Include="Views\ROLs\Edit.cshtml" />
+    <Content Include="Views\ROLs\Index.cshtml" />
+    <Content Include="Views\PRIVILEGIOs\Create.cshtml" />
+    <Content Include="Views\PRIVILEGIOs\Delete.cshtml" />
+    <Content Include="Views\PRIVILEGIOs\Details.cshtml" />
+    <Content Include="Views\PRIVILEGIOs\Edit.cshtml" />
+    <Content Include="Views\PRIVILEGIOs\Index.cshtml" />
+    <Content Include="Views\ESTADOes\Create.cshtml" />
+    <Content Include="Views\ESTADOes\Delete.cshtml" />
+    <Content Include="Views\ESTADOes\Details.cshtml" />
+    <Content Include="Views\ESTADOes\Edit.cshtml" />
+    <Content Include="Views\ESTADOes\Index.cshtml" />
+    <Content Include="Views\CLIENTEs\Create.cshtml" />
+    <Content Include="Views\CLIENTEs\Delete.cshtml" />
+    <Content Include="Views\CLIENTEs\Details.cshtml" />
+    <Content Include="Views\CLIENTEs\Edit.cshtml" />
+    <Content Include="Views\CLIENTEs\Index.cshtml" />
+    <Content Include="Views\RESERVAs\Create.cshtml" />
+    <Content Include="Views\RESERVAs\Delete.cshtml" />
+    <Content Include="Views\RESERVAs\Details.cshtml" />
+    <Content Include="Views\RESERVAs\Edit.cshtml" />
+    <Content Include="Views\RESERVAs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

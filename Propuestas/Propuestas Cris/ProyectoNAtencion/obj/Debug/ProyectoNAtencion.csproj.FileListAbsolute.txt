@@ -98,3 +98,4 @@ C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\ProyectoN
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\ProyectoNAtencion\ProyectoNAtencion\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\ProyectoNAtencion\ProyectoNAtencion\obj\Debug\ProyectoNAtencion.dll
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\ProyectoNAtencion\ProyectoNAtencion\obj\Debug\ProyectoNAtencion.pdb
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\ProyectoNAtencion\ProyectoNAtencion\obj\Debug\ProyectoNAtencion.csprojResolveAssemblyReference.cache

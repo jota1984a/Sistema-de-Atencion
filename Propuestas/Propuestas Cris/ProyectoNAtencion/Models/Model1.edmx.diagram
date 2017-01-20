@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="955a6b2992fb4e6186377694308f751e" Name="Diagram1">
+      <Diagram DiagramId="de5ae313737a4be2b1fbab37d89ff628" Name="Diagram1">
         <EntityTypeShape EntityType="NatencionModel.CARGO" Width="1.5" PointX="12" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="NatencionModel.CIUDAD" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="NatencionModel.CLASIFICACION" Width="1.5" PointX="9.75" PointY="1.5" IsExpanded="true" />
@@ -12,13 +12,13 @@
         <EntityTypeShape EntityType="NatencionModel.COMUNA" Width="1.5" PointX="7.5" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="NatencionModel.EMPLEADO" Width="1.5" PointX="14.25" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="NatencionModel.EMPRESA" Width="1.5" PointX="9.75" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="NatencionModel.ESTADO" Width="1.5" PointX="12.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatencionModel.ESTADO" Width="1.5" PointX="12.75" PointY="11" IsExpanded="true" />
         <EntityTypeShape EntityType="NatencionModel.PAIS" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="NatencionModel.PRIVILEGIO" Width="1.5" PointX="10.5" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatencionModel.PRIVILEGIO" Width="1.5" PointX="15" PointY="17.25" IsExpanded="true" />
         <EntityTypeShape EntityType="NatencionModel.REGION" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="NatencionModel.RESERVA" Width="1.5" PointX="17.25" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="NatencionModel.ROL" Width="1.5" PointX="12.75" PointY="13.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="NatencionModel.SUCURSAL" Width="1.5" PointX="12" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatencionModel.ROL" Width="1.5" PointX="12.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NatencionModel.SUCURSAL" Width="1.5" PointX="12" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="NatencionModel.TIEMPO_ATENCION" Width="1.5" PointX="15" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="NatencionModel.FK_EMPLEADO_UTILIZA_CARGO" ManuallyRouted="false" />
         <AssociationConnector Association="NatencionModel.FK_CIUDAD_PERTENECE_REGION" ManuallyRouted="false" />
@@ -31,7 +31,7 @@
         <AssociationConnector Association="NatencionModel.FK_EMPLEADO_INCLUYE2_SUCURSAL" ManuallyRouted="false" />
         <AssociationConnector Association="NatencionModel.FK_SUCURSAL_TIENE4_EMPRESA" ManuallyRouted="false" />
         <AssociationConnector Association="NatencionModel.FK_REGION_PERTENECE_PAIS" ManuallyRouted="false" />
-        <AssociationConnector Association="NatencionModel.FK_ROL_INTEGRA_PRIVILEG" ManuallyRouted="false" />
+        <AssociationConnector Association="NatencionModel.FK_PRIVILEG_INTEGRA_ROL" ManuallyRouted="false" />
         <AssociationConnector Association="NatencionModel.FK_RESERVA_INTEGRA2_TIEMPO_A" ManuallyRouted="false" />
         <AssociationConnector Association="NatencionModel.FK_RESERVA_POSEE_SUCURSAL" ManuallyRouted="false" />
       </Diagram>

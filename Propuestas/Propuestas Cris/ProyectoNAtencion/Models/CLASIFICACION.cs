@@ -22,8 +22,7 @@ namespace ProyectoNAtencion.Models
     
         public int ID_CLASIFICACION { get; set; }
         public string NUMERO { get; set; }
-        public Nullable<System.DateTime> HORA { get; set; }
-        public string NOMBRE { get; set; }
+        public System.DateTime HORA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SUCURSAL> SUCURSAL { get; set; }

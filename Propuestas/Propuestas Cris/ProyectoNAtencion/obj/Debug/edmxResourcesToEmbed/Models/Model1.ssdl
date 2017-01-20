@@ -22,8 +22,7 @@
     </Key>
     <Property Name="ID_CLASIFICACION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NUMERO" Type="varchar" MaxLength="4" Nullable="false" />
-    <Property Name="HORA" Type="datetime" />
-    <Property Name="NOMBRE" Type="varchar" MaxLength="20" />
+    <Property Name="HORA" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="CLIENTE">
     <Key>
@@ -40,7 +39,7 @@
     <Property Name="TELEFONO" Type="int" Nullable="false" />
     <Property Name="EMAIL" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="USUARIO" Type="varchar" MaxLength="15" Nullable="false" />
-    <Property Name="PASS" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="PASS" Type="varchar" MaxLength="18" Nullable="false" />
     <Property Name="PREGUNTASEG1" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="RESPUESTASEG1" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="PREGUNTASEG2" Type="varchar" MaxLength="30" Nullable="false" />
@@ -120,6 +119,7 @@
       <PropertyRef Name="ID_PRIVILEGIO" />
     </Key>
     <Property Name="ID_PRIVILEGIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_ROL" Type="int" />
     <Property Name="NOMBRE_PRIVILEGIO" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="DESCRIPCION_PRIVILEGIO" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
@@ -147,7 +147,6 @@
       <PropertyRef Name="ID_ROL" />
     </Key>
     <Property Name="ID_ROL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ID_PRIVILEGIO" Type="int" />
     <Property Name="NOMBRE_ROL" Type="varchar" MaxLength="15" Nullable="false" />
   </EntityType>
   <EntityType Name="SUCURSAL">
@@ -158,17 +157,16 @@
     <Property Name="ID_CLASIFICACION" Type="int" />
     <Property Name="ID_EMPRESA" Type="int" />
     <Property Name="NOMBRE_SUCURSAL" Type="varchar" MaxLength="25" Nullable="false" />
-    <Property Name="HORA_INICIO" Type="time" Precision="7" Nullable="false" />
-    <Property Name="HORA_TERMINO" Type="time" Precision="7" Nullable="false" />
-    <Property Name="LATITUD_SUCURSAL" Type="decimal" Precision="20" Scale="20" />
-    <Property Name="LONGITUD_SUCURSAL" Type="decimal" Precision="20" Scale="20" />
-    <Property Name="PRECISION_SUCURSAL" Type="decimal" Precision="20" Scale="20" />
+    <Property Name="LATITUD_SUCURSAL" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="LONGITUD_SUCURSAL" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="UCR_SUCURSAL" Type="int" Nullable="false" />
     <Property Name="UAC_SUCURSAL" Type="int" />
     <Property Name="UEL_SUCURSAL" Type="int" />
     <Property Name="FCR_SUCURSAL" Type="datetime" Nullable="false" />
     <Property Name="FAC_SUCURSAL" Type="datetime" />
     <Property Name="FEL_SUCURSAL" Type="datetime" />
+    <Property Name="HORA_INICIO" Type="datetime" />
+    <Property Name="HORA_TERMINO" Type="datetime" />
   </EntityType>
   <EntityType Name="TIEMPO_ATENCION">
     <Key>
@@ -262,6 +260,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_PRIVILEG_INTEGRA_ROL">
+    <End Role="ROL" Type="Self.ROL" Multiplicity="0..1" />
+    <End Role="PRIVILEGIO" Type="Self.PRIVILEGIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROL">
+        <PropertyRef Name="ID_ROL" />
+      </Principal>
+      <Dependent Role="PRIVILEGIO">
+        <PropertyRef Name="ID_ROL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_REGION_PERTENECE_PAIS">
     <End Role="PAIS" Type="Self.PAIS" Multiplicity="0..1" />
     <End Role="REGION" Type="Self.REGION" Multiplicity="*" />
@@ -307,18 +317,6 @@
       </Principal>
       <Dependent Role="RESERVA">
         <PropertyRef Name="ID_SUCURSAL" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ROL_INTEGRA_PRIVILEG">
-    <End Role="PRIVILEGIO" Type="Self.PRIVILEGIO" Multiplicity="0..1" />
-    <End Role="ROL" Type="Self.ROL" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="PRIVILEGIO">
-        <PropertyRef Name="ID_PRIVILEGIO" />
-      </Principal>
-      <Dependent Role="ROL">
-        <PropertyRef Name="ID_PRIVILEGIO" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -390,6 +388,10 @@
       <End Role="COMUNA" EntitySet="COMUNA" />
       <End Role="EMPRESA" EntitySet="EMPRESA" />
     </AssociationSet>
+    <AssociationSet Name="FK_PRIVILEG_INTEGRA_ROL" Association="Self.FK_PRIVILEG_INTEGRA_ROL">
+      <End Role="ROL" EntitySet="ROL" />
+      <End Role="PRIVILEGIO" EntitySet="PRIVILEGIO" />
+    </AssociationSet>
     <AssociationSet Name="FK_REGION_PERTENECE_PAIS" Association="Self.FK_REGION_PERTENECE_PAIS">
       <End Role="PAIS" EntitySet="PAIS" />
       <End Role="REGION" EntitySet="REGION" />
@@ -405,10 +407,6 @@
     <AssociationSet Name="FK_RESERVA_POSEE_SUCURSAL" Association="Self.FK_RESERVA_POSEE_SUCURSAL">
       <End Role="SUCURSAL" EntitySet="SUCURSAL" />
       <End Role="RESERVA" EntitySet="RESERVA" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ROL_INTEGRA_PRIVILEG" Association="Self.FK_ROL_INTEGRA_PRIVILEG">
-      <End Role="PRIVILEGIO" EntitySet="PRIVILEGIO" />
-      <End Role="ROL" EntitySet="ROL" />
     </AssociationSet>
     <AssociationSet Name="FK_SUCURSAL_TIENE_CLASIFIC" Association="Self.FK_SUCURSAL_TIENE_CLASIFIC">
       <End Role="CLASIFICACION" EntitySet="CLASIFICACION" />

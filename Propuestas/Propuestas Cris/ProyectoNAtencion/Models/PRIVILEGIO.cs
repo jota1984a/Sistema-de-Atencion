@@ -14,17 +14,11 @@ namespace ProyectoNAtencion.Models
     
     public partial class PRIVILEGIO
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PRIVILEGIO()
-        {
-            this.ROL = new HashSet<ROL>();
-        }
-    
         public int ID_PRIVILEGIO { get; set; }
+        public Nullable<int> ID_ROL { get; set; }
         public string NOMBRE_PRIVILEGIO { get; set; }
         public string DESCRIPCION_PRIVILEGIO { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ROL> ROL { get; set; }
+        public virtual ROL ROL { get; set; }
     }
 }

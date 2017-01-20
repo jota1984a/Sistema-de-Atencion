@@ -1,0 +1,34 @@
+﻿@model ProyectoNAtencion.Models.TIEMPO_ATENCION
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TIEMPO_ATENCION</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TIEMPO_ATENCION1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIEMPO_ATENCION1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VALOR_ATENCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VALOR_ATENCION)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_ATENCION }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

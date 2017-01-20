@@ -18,14 +18,15 @@ namespace ProyectoNAtencion.Models
         public ROL()
         {
             this.CLIENTE = new HashSet<CLIENTE>();
+            this.PRIVILEGIO = new HashSet<PRIVILEGIO>();
         }
     
         public int ID_ROL { get; set; }
-        public Nullable<int> ID_PRIVILEGIO { get; set; }
         public string NOMBRE_ROL { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CLIENTE> CLIENTE { get; set; }
-        public virtual PRIVILEGIO PRIVILEGIO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PRIVILEGIO> PRIVILEGIO { get; set; }
     }
 }

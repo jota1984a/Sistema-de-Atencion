@@ -1,0 +1,5 @@
+
+20-01-2017 madrugada
+logre instanciar un mapa y obtener la localizacion.
+tambien pude pasar la latitud y longitud a string por lo que no habra problemas con la bdd
+, ahora la implementacion del mapa en el controlador de crear y modificar esta complicado hasta ahora no puedo hacerlo.

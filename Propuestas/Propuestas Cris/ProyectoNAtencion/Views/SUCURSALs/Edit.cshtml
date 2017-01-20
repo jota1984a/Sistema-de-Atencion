@@ -58,30 +58,6 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.LATITUD_SUCURSAL, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LATITUD_SUCURSAL, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LATITUD_SUCURSAL, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.LONGITUD_SUCURSAL, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LONGITUD_SUCURSAL, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LONGITUD_SUCURSAL, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.PRECISION_SUCURSAL, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PRECISION_SUCURSAL, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PRECISION_SUCURSAL, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
             @Html.LabelFor(model => model.UCR_SUCURSAL, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.UCR_SUCURSAL, new { htmlAttributes = new { @class = "form-control" } })
@@ -130,10 +106,29 @@
         </div>
 
         <div class="form-group">
+            @Html.LabelFor(model => model.LATITUD_SUCURSAL, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.LATITUD_SUCURSAL, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.LATITUD_SUCURSAL, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.LONGITUD_SUCURSAL, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.LONGITUD_SUCURSAL, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.LONGITUD_SUCURSAL, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </div>
+    </div>
+    <div id="mapa">
+        texto dentro del div para prueba
     </div>
 }
 
@@ -144,3 +139,16 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+<script>
+
+
+function initMap() {
+ var map = new google.maps.Map(document.getElementById('mapa'), {
+     center: { lat: -33.4743591, lng: -70.5410011 },
+    zoom: 8
+  });
+}
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzXEVbfnNpvBgKY9BONSKVOt6NjXyGdqs"
+        ></script>

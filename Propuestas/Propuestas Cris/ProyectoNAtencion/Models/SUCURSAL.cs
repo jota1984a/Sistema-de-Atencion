@@ -25,17 +25,16 @@ namespace ProyectoNAtencion.Models
         public Nullable<int> ID_CLASIFICACION { get; set; }
         public Nullable<int> ID_EMPRESA { get; set; }
         public string NOMBRE_SUCURSAL { get; set; }
-        public System.TimeSpan HORA_INICIO { get; set; }
-        public System.TimeSpan HORA_TERMINO { get; set; }
-        public Nullable<decimal> LATITUD_SUCURSAL { get; set; }
-        public Nullable<decimal> LONGITUD_SUCURSAL { get; set; }
-        public Nullable<decimal> PRECISION_SUCURSAL { get; set; }
+        public string LATITUD_SUCURSAL { get; set; }
+        public string LONGITUD_SUCURSAL { get; set; }
         public int UCR_SUCURSAL { get; set; }
         public Nullable<int> UAC_SUCURSAL { get; set; }
         public Nullable<int> UEL_SUCURSAL { get; set; }
         public System.DateTime FCR_SUCURSAL { get; set; }
         public Nullable<System.DateTime> FAC_SUCURSAL { get; set; }
         public Nullable<System.DateTime> FEL_SUCURSAL { get; set; }
+        public Nullable<System.DateTime> HORA_INICIO { get; set; }
+        public Nullable<System.DateTime> HORA_TERMINO { get; set; }
     
         public virtual CLASIFICACION CLASIFICACION { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

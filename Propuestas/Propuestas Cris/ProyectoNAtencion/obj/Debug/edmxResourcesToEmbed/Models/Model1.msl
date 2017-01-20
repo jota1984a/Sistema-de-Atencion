@@ -22,7 +22,6 @@
     <EntitySetMapping Name="CLASIFICACION">
       <EntityTypeMapping TypeName="NatencionModel.CLASIFICACION">
         <MappingFragment StoreEntitySet="CLASIFICACION">
-          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
           <ScalarProperty Name="ID_CLASIFICACION" ColumnName="ID_CLASIFICACION" />
           <ScalarProperty Name="NUMERO" ColumnName="NUMERO" />
           <ScalarProperty Name="HORA" ColumnName="HORA" />
@@ -129,6 +128,7 @@
       <EntityTypeMapping TypeName="NatencionModel.PRIVILEGIO">
         <MappingFragment StoreEntitySet="PRIVILEGIO">
           <ScalarProperty Name="ID_PRIVILEGIO" ColumnName="ID_PRIVILEGIO" />
+          <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
           <ScalarProperty Name="NOMBRE_PRIVILEGIO" ColumnName="NOMBRE_PRIVILEGIO" />
           <ScalarProperty Name="DESCRIPCION_PRIVILEGIO" ColumnName="DESCRIPCION_PRIVILEGIO" />
         </MappingFragment>
@@ -159,7 +159,6 @@
       <EntityTypeMapping TypeName="NatencionModel.ROL">
         <MappingFragment StoreEntitySet="ROL">
           <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
-          <ScalarProperty Name="ID_PRIVILEGIO" ColumnName="ID_PRIVILEGIO" />
           <ScalarProperty Name="NOMBRE_ROL" ColumnName="NOMBRE_ROL" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -167,15 +166,14 @@
     <EntitySetMapping Name="SUCURSAL">
       <EntityTypeMapping TypeName="NatencionModel.SUCURSAL">
         <MappingFragment StoreEntitySet="SUCURSAL">
+          <ScalarProperty Name="HORA_TERMINO" ColumnName="HORA_TERMINO" />
+          <ScalarProperty Name="HORA_INICIO" ColumnName="HORA_INICIO" />
           <ScalarProperty Name="ID_SUCURSAL" ColumnName="ID_SUCURSAL" />
           <ScalarProperty Name="ID_CLASIFICACION" ColumnName="ID_CLASIFICACION" />
           <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
           <ScalarProperty Name="NOMBRE_SUCURSAL" ColumnName="NOMBRE_SUCURSAL" />
-          <ScalarProperty Name="HORA_INICIO" ColumnName="HORA_INICIO" />
-          <ScalarProperty Name="HORA_TERMINO" ColumnName="HORA_TERMINO" />
           <ScalarProperty Name="LATITUD_SUCURSAL" ColumnName="LATITUD_SUCURSAL" />
           <ScalarProperty Name="LONGITUD_SUCURSAL" ColumnName="LONGITUD_SUCURSAL" />
-          <ScalarProperty Name="PRECISION_SUCURSAL" ColumnName="PRECISION_SUCURSAL" />
           <ScalarProperty Name="UCR_SUCURSAL" ColumnName="UCR_SUCURSAL" />
           <ScalarProperty Name="UAC_SUCURSAL" ColumnName="UAC_SUCURSAL" />
           <ScalarProperty Name="UEL_SUCURSAL" ColumnName="UEL_SUCURSAL" />
